@@ -41,7 +41,9 @@
 					<div class="position-relative">
 						<img class="rounded-circle mb-2" src="/assets/img/himakom.png" style="height: 30px;">
 					</div>
-					<a href=""><h3 class="ff-gantari ms-2"></i>SIHIMA</h3></a>
+					<a href="">
+						<h3 class="ff-gantari ms-2"></i>SIHIMA</h3>
+					</a>
 				</div>
 				<div class="d-flex align-items-center ms-4 mt-2 mb-4">
 					<div class="position-relative">
@@ -53,13 +55,13 @@
 						<span class="ff-gantari">Admin</span>
 					</div>
 				</div>
+
 				<div class="navbar-nav w-100">
 					<a href="" class="nav-item nav-link active ff-gantari"><i class="fa fa-table me-2"></i>Tabel</a>
 				</div>
 			</nav>
 		</div>
 		<!-- Sidebar End -->
-
 
 		<!-- Content Start -->
 		<div class="content">
@@ -123,8 +125,8 @@
 											</td>
 										</tr>
 									</tbody>
-									<?php endforeach; ?>
-									<caption>Total</caption>
+								<?php endforeach; ?>
+								<caption>Total</caption>
 							</table>
 						</div>
 					</div>

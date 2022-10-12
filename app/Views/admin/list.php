@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<title>SIHIMA</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="icon">
+
+	<!-- Google Web Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<!-- Icon Font Stylesheet -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+	<!-- Libraries Stylesheet -->
+	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+	<!-- Customized Bootstrap Stylesheet -->
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Template Stylesheet -->
+	<link href="/assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-<<<<<<< Updated upstream
-<table style="width:100%">
-<a href ="/tambah" type="button">Tambah</a>
-  <tr>
-    <th>id Anggota</th>
-    <th>Nama Anggota</th>
-    <th>NPM</th>
-    <th>Bidang</th>
-    <th>Prodi</th>
-    <th>Status Jabatan</th>
-    <th>Periode</th>
-  </tr>
-  <?php foreach ($Biodata as $Bio):?>
-  <tr>
-    <td><?= $Bio['id_anggota']?></td>
-    <td><?= $Bio['nama_anggota']?></td>
-    <td><?= $Bio['npm']?></td>
-    <td><?= $Bio['nama_bidang']?></td>
-    <td><?= $Bio['nama_prodi']?></td>
-    <td><?= $Bio['nama_jabatan']?></td>
-    <td><?= $Bio['periode']?></td>
-    <td>
-    <form action="/hapus/<?= $Bio['id_anggota'] ?>" method="post">
-          <input type="hidden" name ="_method" value="DELETE" />
-    <button type="submit" class="btn btn-danger"> Delete</button>
-    </form>
-    </td>
-    <td>
-    <a class="btn btn-warning mr-3" href="/edit/<?= $Bio['id_anggota']?>"></i> Edit</a>
-    </td>
-  </tr>
-  <?php endforeach; ?>
-</table>
-</body>
-</html>
-=======
 	<div class="container-fluid position-relative d-flex p-0">
 		<!-- Sidebar Start -->
 		<div class="sidebar pe-4 py-3">
@@ -175,4 +165,4 @@
 	<!-- Template Javascript -->
 	<script src="js/main.js"></script>
 </body>
->>>>>>> Stashed changes
+

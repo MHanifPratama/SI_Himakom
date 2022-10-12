@@ -94,7 +94,7 @@ class adminFunction extends BaseController
             'status_jabatan'=>'required',
             'periode'=>'required',
         ])){
-            return redirect()->to('/simpan');
+            return redirect()->to('/');
         }
 
         $mahasiswaModel = new Biodata();

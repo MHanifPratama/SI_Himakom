@@ -15,20 +15,31 @@
             <label for="bidang">Bidang</label>
             <select type="text" name = "bidang" id="bidang">
                 <?php foreach ($Bidang as $bidang):?>
-                    <option value="<?=$bidang['id_bidang']?>"><?=$bidang['nama_bidang']?></option>
+                    <?php if ($bidang['id_bidang'] == $Biodata['id_bidang']):?>
+                        <option selected value="<?=$bidang['id_bidang']?>"><?=$bidang['nama_bidang']?></option>
+                    <?php else:?>
+                        <option value="<?=$bidang['id_bidang']?>"><?=$bidang['nama_bidang']?></option>
+                    <?php endif?>
                 <?php endforeach; ?>
             </select>
             <label for="prodi">Prodi</label>
             <select type="text" name = "prodi" id="prodi">
                 <?php foreach ($Prodi as $prodi):?>
-                    <option value="<?=$prodi['id_prodi']?>"><?=$prodi['nama_prodi']?></option>
+                    <?php if ($prodi['id_prodi'] == $Biodata['id_prodi']):?>
+                        <option selected value="<?=$prodi['id_prodi']?>"><?=$prodi['nama_prodi']?></option>
+                    <?php else:?>
+                        <option value="<?=$prodi['id_prodi']?>"><?=$prodi['nama_prodi']?></option>
+                    <?php endif?>
                 <?php endforeach; ?>
-
             </select>
             <label for="status_jabatan">Status Jabatan</label>
             <select type="text" name = "status_jabatan" id="status_jabatan">
                 <?php foreach ($Jabatan as $jabatan):?>
-                    <option value="<?=$jabatan['id_jabatan']?>"><?=$jabatan['nama_jabatan']?></option>
+                    <?php if ($jabatan['id_jabatan'] == $Biodata['id_jabatan']):?>
+                        <option selected value="<?=$jabatan['id_jabatan']?>"><?=$jabatan['nama_jabatan']?></option>
+                    <?php else:?>
+                        <option value="<?=$jabatan['id_jabatan']?>"><?=$jabatan['nama_jabatan']?></option>
+                    <?php endif?>
                 <?php endforeach; ?>
             </select>
             <label for="periode">Periode</label>

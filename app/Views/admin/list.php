@@ -149,7 +149,7 @@
 
 
 		<!-- Back to Top -->
-		<a href="#" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="bi bi-arrow-up text-dark"></i></a>
+		<a href="\tambah" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="bi bi-plus text-dark"></i></a>
 	</div>
 
 	<!-- JavaScript Libraries -->
@@ -165,3 +165,4 @@
 	<!-- Template Javascript -->
 	<script src="js/main.js"></script>
 </body>
+

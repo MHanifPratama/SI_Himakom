@@ -38,6 +38,7 @@ $routes->set404Override();
 // $routes->get('/', 'Home::index');
 $routes->get('/', 'admin\adminFunction::index');
 $routes->get('/tambah', 'admin\adminFunction::tambah');
+$routes->get('/list_panitia', 'admin\adminFunction::list_panitia');
 $routes->post('/simpan', 'admin\adminFunction::simpan');
 $routes->delete('/hapus/(:num)', 'admin\adminFunction::hapus/$1');
 $routes->get('/edit/(:num)', 'admin\adminFunction::edit/$1');

@@ -105,6 +105,12 @@
     border-radius: 50px;
 }
 
+.btn-primary{
+    background-color: var(--primary) !important;
+    font-size: large !important;
+    font-weight: bold !important;
+}
+
 .btn-light{
     background-color: var(--tertiary) !important;
 }
@@ -120,6 +126,12 @@
 /*** Table ***/
 .table-hover>tbody>tr:hover {
 	color: var(--light)
+}
+
+/*** Form ***/
+.form-control, .form-select{
+    background-color: var(--dark) !important;
+    border: none;
 }
 
 

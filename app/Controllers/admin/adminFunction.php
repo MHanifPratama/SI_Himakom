@@ -18,6 +18,16 @@ class adminFunction extends BaseController
         ];
         return view('admin\list',$data);
     }
+    public function list_panitia(){
+        $request = \Config\Services::request();
+        if($request->uri->getSegment(1)=="list_panitia"){
+            $data = [
+                'title' => 'Biodata',
+                'uri' => 'list_panitia'
+            ];
+        }
+        return view('admin\list_panitia',$data). view("templates\header",$data);
+    }
     public function tambah(){
         $bidang = new Bidang();
         $jabatan = new Jabatan();

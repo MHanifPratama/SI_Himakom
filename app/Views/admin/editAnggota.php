@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="navbar-nav w-100">
-                    <a href="" class="nav-item nav-link active ff-gantari"><i class="fa fa-table me-2"></i>Tabel</a>
+                    <a href="/" class="nav-item nav-link active ff-gantari"><i class="fa fa-table me-2"></i>Tabel</a>
                 </div>
             </nav>
         </div>
@@ -86,15 +86,15 @@
                         <div class="bg-secondary rounded h-100 p-4">
                             <h5 class="mb-4 ff-gantari">Edit Anggota</h5>
                             <form action="/update/<?= $Biodata['id_anggota'] ?>" method="post">
-                                <div class="form-floating border-0 mb-3 ff-gantari">
+                                <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                                     <input type="text" class="form-control text-light" id="nama_anggota" name="nama_anggota" value="<?= $Biodata['nama_anggota'] ?>">
                                     <label for="nama_anggota">Nama Lengkap</label>
                                 </div>
-                                <div class="form-floating border-0 mb-3 ff-gantari">
+                                <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                                     <input type="text" class="form-control text-light" id="npm" value="<?= $Biodata['npm'] ?>">
                                     <label for="npm">NPM</label>
                                 </div>
-                                <div class="form-floating border-0 mb-3 ff-gantari">
+                                <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                                     <select class="form-select text-light" id="bidang" aria-label="Bidang">
                                         <?php foreach ($Bidang as $bidang) : ?>
                                             <?php if ($bidang['id_bidang'] == $Biodata['id_bidang']) : ?>
@@ -106,7 +106,7 @@
                                     </select>
                                     <label for="bidang">Bidang</label>
                                 </div>
-                                <div class="form-floating border-0 mb-3 ff-gantari">
+                                <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                                     <select class="form-select text-light" id="prodi" aria-label="Prodi">
                                         <?php foreach ($Prodi as $prodi) : ?>
                                             <?php if ($prodi['id_prodi'] == $Biodata['id_prodi']) : ?>
@@ -118,7 +118,7 @@
                                     </select>
                                     <label for="prodi">Prodi</label>
                                 </div>
-                                <div class="form-floating border-0 mb-3 ff-gantari">
+                                <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                                     <select class="form-select text-light" id="status_jabatan" aria-label="Status Jabatan">
                                         <?php foreach ($Jabatan as $jabatan) : ?>
                                             <?php if ($jabatan['id_jabatan'] == $Biodata['id_jabatan']) : ?>
@@ -128,9 +128,9 @@
                                             <?php endif ?>
                                         <?php endforeach; ?>
                                     </select>
-                                    <label for="status_jabatan">Prodi</label>
+                                    <label for="status_jabatan">Status Jawaban</label>
                                 </div>
-                                <div class="form-floating border-0 mb-3 ff-gantari">
+                                <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                                     <input type="text" class="form-control text-light" id="periode" name="periode" value="<?= $Biodata['periode'] ?>">
                                     <label for="periode">Periode</label>
                                 </div>
@@ -156,8 +156,7 @@
         <!-- Content End -->
 
 
-        <!-- Back to Top -->
-        <a href="\tambah" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="bi bi-plus text-dark"></i></a>
+
     </div>
 
     <!-- JavaScript Libraries -->

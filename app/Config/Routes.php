@@ -36,12 +36,35 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
+
 $routes->get('/', 'admin\adminFunction::index');
+
 $routes->get('/tambah', 'admin\adminFunction::tambah');
 $routes->post('/simpan', 'admin\adminFunction::simpan');
 $routes->delete('/hapus/(:num)', 'admin\adminFunction::hapus/$1');
 $routes->get('/edit/(:num)', 'admin\adminFunction::edit/$1');
 $routes->post('/update/(:num)', 'admin\adminFunction::update/$1');
+//jabatan
+$routes->get('/listJabatan', 'admin\jabatanFunction::list_jabatan');
+$routes->get('/tambahJabatan', 'admin\jabatanFunction::tambah');
+$routes->post('/simpan_jabatan', 'admin\jabatanFunction::simpan');
+$routes->delete('/hapus_jabatan/(:num)', 'admin\jabatanFunction::hapus/$1');
+$routes->get('/edit_jabatan/(:num)', 'admin\jabatanFunction::edit/$1');
+$routes->post('/update_jabatan/(:num)', 'admin\jabatanFunction::update/$1');
+//bidang
+$routes->get('/listBidang', 'admin\bidangFunction::list_bidang');
+$routes->get('/tambahBidang', 'admin\bidangFunction::tambah');
+$routes->post('/simpan_bidang', 'admin\bidangFunction::simpan');
+$routes->delete('/hapus_bidang/(:num)', 'admin\bidangFunction::hapus/$1');
+$routes->get('/edit_bidang/(:num)', 'admin\bidangFunction::edit/$1');
+$routes->post('/update_bidang/(:num)', 'admin\bidangFunction::update/$1');
+//prodi
+$routes->get('/listProdi', 'admin\prodiFunction::list_prodi');
+$routes->get('/tambahProdi', 'admin\prodiFunction::tambah');
+$routes->post('/simpan_prodi', 'admin\prodiFunction::simpan');
+$routes->delete('/hapus_prodi/(:num)', 'admin\prodiFunction::hapus/$1');
+$routes->get('/edit_prodi/(:num)', 'admin\prodiFunction::edit/$1');
+$routes->post('/update_prodi/(:num)', 'admin\prodiFunction::update/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

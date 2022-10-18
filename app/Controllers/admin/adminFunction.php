@@ -16,23 +16,8 @@ class adminFunction extends BaseController
             'title' => 'Biodata',
             'Biodata' => $dataBiodata
         ];
-<<<<<<< Updated upstream
-        return view('admin\list',$data);
-    }
-=======
         return view('admin\anggota\list',$data);
     }
-    // public function list_jabatan(){
-    //     $request = \Config\Services::request();
-    //     if($request->uri->getSegment(1)=="list_jabatan"){
-    //         $data = [
-    //             'title' => 'Biodata',
-    //             'uri' => 'list_jabatan'
-    //         ];
-    //     }
-    //     return view('admin\list_jabatan',$data);
-    // }
->>>>>>> Stashed changes
     public function tambah(){
         $bidang = new Bidang();
         $jabatan = new Jabatan();

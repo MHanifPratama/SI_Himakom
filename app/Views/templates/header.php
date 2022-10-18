@@ -12,7 +12,7 @@
 	<meta content="" name="description">
 
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="icon">
+	<link href="/assets/img/himakom.png" rel="icon">
 
 	<!-- Google Web Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,9 +110,14 @@
 							<a href="/" class="<?= "nav-item nav-link ff-gantari" ?>"><i class="fa fa-table me-2"></i>Tabel</a>
 						</div>
 						<div class="navbar-nav w-100">
-							<a href="/list_panitia" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Panitia</a>
+							<a href="/listJabatan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Jabatan</a>
 						</div>
-
+						<div class="navbar-nav w-100">
+							<a href="/listProdi" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Program Studi</a>
+						</div>
+						<div class="navbar-nav w-100">
+							<a href="/listBidang" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Bidang</a>
+						</div>
 					</nav>
 				</div>
 				<?= $this->renderSection('content') ?>

@@ -16,7 +16,7 @@ class adminFunction extends BaseController
             'title' => 'Biodata',
             'Biodata' => $dataBiodata
         ];
-        return view('admin\list',$data);
+        return view('admin\anggota\list',$data);
     }
     public function list_panitia(){
         $request = \Config\Services::request();
@@ -41,7 +41,7 @@ class adminFunction extends BaseController
             'Jabatan' => $dataJabatan,
             'Prodi' => $dataProdi
         ];
-        return view('admin\tambahAnggota', $data);
+        return view('admin\anggota\tambahAnggota', $data);
 
     }
     public function simpan(){
@@ -93,7 +93,7 @@ class adminFunction extends BaseController
             'Jabatan' => $dataJabatan,
             'Prodi' => $dataProdi
         ];
-        return view('admin/editAnggota', $data);
+        return view('admin\anggota\editAnggota', $data);
     }
     public function update($id){
         if(!$this->validate([

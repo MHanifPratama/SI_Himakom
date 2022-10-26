@@ -66,6 +66,8 @@ $routes->post('/simpan_prodi', 'admin\prodiFunction::simpan');
 $routes->delete('/hapus_prodi/(:num)', 'admin\prodiFunction::hapus/$1');
 $routes->get('/edit_prodi/(:num)', 'admin\prodiFunction::edit/$1');
 $routes->post('/update_prodi/(:num)', 'admin\prodiFunction::update/$1');
+
+$routes->get('/listLaporan', 'pimpinan\laporanFunction::list_laporan');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

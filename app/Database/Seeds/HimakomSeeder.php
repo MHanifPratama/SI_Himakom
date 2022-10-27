@@ -97,47 +97,43 @@ class HimakomSeeder extends Seeder
         $dataKepanitiaan = [
             [
                 'nama_kepanitiaan'  =>  'Tidak Menjadi Panitia',
-                'id_bidang'  =>  '9',
+                'id_bidang'  =>  '10',
             ],
             [
                 'nama_kepanitiaan'  =>  'Pekan Raya Jurusan',
-                'id_bidang'  =>  '0',
-            ],
-            [
-                'nama_kepanitiaan'  =>  'Perekrutan Asisten Dosen',
                 'id_bidang'  =>  '1',
             ],
             [
-                'nama_kepanitiaan'  =>  'PRINTER',
+                'nama_kepanitiaan'  =>  'Perekrutan Asisten Dosen',
                 'id_bidang'  =>  '2',
             ],
             [
-                'nama_kepanitiaan'  =>  'Workshop Wawancara Kerja',
+                'nama_kepanitiaan'  =>  'PRINTER',
                 'id_bidang'  =>  '3',
             ],
             [
-                'nama_kepanitiaan'  =>  'KOKOM',
+                'nama_kepanitiaan'  =>  'Workshop Wawancara Kerja',
                 'id_bidang'  =>  '4',
             ],
             [
-                'nama_kepanitiaan'  =>  'Logical',
+                'nama_kepanitiaan'  =>  'KOKOM',
                 'id_bidang'  =>  '5',
             ],
             [
                 'nama_kepanitiaan'  =>  'Logical',
-                'id_bidang'  =>  '5',
-            ],
-            [
-                'nama_kepanitiaan'  =>  'Podcast Himakom',
                 'id_bidang'  =>  '6',
             ],
             [
-                'nama_kepanitiaan'  =>  'Pelatihan SPIA dan SPIK',
+                'nama_kepanitiaan'  =>  'Podcast Himakom',
                 'id_bidang'  =>  '7',
             ],
             [
-                'nama_kepanitiaan'  =>  'Pelatihan Kewirausahaan',
+                'nama_kepanitiaan'  =>  'Pelatihan SPIA dan SPIK',
                 'id_bidang'  =>  '8',
+            ],
+            [
+                'nama_kepanitiaan'  =>  'Pelatihan Kewirausahaan',
+                'id_bidang'  =>  '9',
             ],
         ];
         $dataJabatan =[
@@ -173,6 +169,7 @@ class HimakomSeeder extends Seeder
                 'id_bidang'  =>  '4',
                 'id_prodi'  =>  '1',
                 'id_jabatan'  =>  '5',
+                'id_status_kepanitiaan'  =>  '1',
                 'periode'  =>  '2022',
             ],
             [
@@ -181,6 +178,7 @@ class HimakomSeeder extends Seeder
                 'id_bidang'  =>  '4',
                 'id_prodi'  =>  '1',
                 'id_jabatan'  =>  '6',
+                'id_status_kepanitiaan'  =>  '1',
                 'periode'  =>  '2022',
             ],
             [
@@ -189,14 +187,15 @@ class HimakomSeeder extends Seeder
                 'id_bidang'  =>  '4',
                 'id_prodi'  =>  '1',
                 'id_jabatan'  =>  '7',
+                'id_status_kepanitiaan'  =>  '1',
                 'periode'  =>  '2022',
             ]
 
         ];
         $this->db->table('jabatan')->insertBatch($dataJabatan);
-        $this->db->table('biodata')->insertBatch($dataBiodata);
         $this->db->table('kepanitiaan')->insertBatch($dataKepanitiaan);
         $this->db->table('prodi')->insertBatch($dataProdi);
         $this->db->table('bidang')->insertBatch($dataBidang);
+        $this->db->table('biodata')->insertBatch($dataBiodata);
     }
 }

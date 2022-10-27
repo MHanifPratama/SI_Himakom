@@ -11,6 +11,6 @@ class Prodi extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['nama_prodi'];
+    protected $allowedFields = ['id_prodi','nama_prodi'];
 }
 ?>

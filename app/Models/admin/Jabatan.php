@@ -11,6 +11,6 @@ class Jabatan extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['nama_jabatan'];
+    protected $allowedFields = ['id_jabatan','nama_jabatan'];
 }
 ?>

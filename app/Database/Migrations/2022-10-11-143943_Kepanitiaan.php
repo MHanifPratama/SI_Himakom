@@ -11,7 +11,7 @@ class Kepanitiaan extends Migration
         $this->forge->addField([
             'id_status_kepanitiaan' => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 20,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
@@ -21,11 +21,13 @@ class Kepanitiaan extends Migration
             ],
             'id_bidang' => [
                 'type'       => 'INT',
-                'constraint' => 5,
+                'constraint' => 20,
+                'unsigned'       => true,
             ],
-            'id_anggota' => [
+            'jumlah_panitia' => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 150,
+                'null'           => true,
             ],
         ]);
         $this->forge->addKey('id_status_kepanitiaan', true);

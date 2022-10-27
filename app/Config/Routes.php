@@ -45,6 +45,8 @@ $routes->post('/simpan', 'admin\adminFunction::simpan');
 $routes->delete('/hapus/(:num)', 'admin\adminFunction::hapus/$1');
 $routes->get('/edit/(:num)', 'admin\adminFunction::edit/$1');
 $routes->post('/update/(:num)', 'admin\adminFunction::update/$1');
+$routes->get('/viewCetak', 'admin\adminFunction::viewCetak/$1');
+$routes->post('/tampilDataCetak', 'admin\adminFunction::tampilCetak');
 //jabatan
 $routes->get('/listJabatan', 'admin\jabatanFunction::list_jabatan');
 $routes->get('/tambahJabatan', 'admin\jabatanFunction::tambah');
@@ -66,6 +68,14 @@ $routes->post('/simpan_prodi', 'admin\prodiFunction::simpan');
 $routes->delete('/hapus_prodi/(:num)', 'admin\prodiFunction::hapus/$1');
 $routes->get('/edit_prodi/(:num)', 'admin\prodiFunction::edit/$1');
 $routes->post('/update_prodi/(:num)', 'admin\prodiFunction::update/$1');
+//Kepanitiaan
+$routes->get('/listKepanitiaan', 'admin\kepanitiaanFunction::list_kepanitiaan');
+$routes->get('/tambahKepanitiaan', 'admin\kepanitiaanFunction::tambah');
+$routes->post('/simpan_kepanitiaan', 'admin\kepanitiaanFunction::simpan');
+$routes->get('/edit_kepanitiaan/(:num)', 'admin\kepanitiaanFunction::edit/$1');
+$routes->post('/update_kepanitiaan/(:num)', 'admin\kepanitiaanFunction::update/$1');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

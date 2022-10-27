@@ -11,7 +11,7 @@ class Jabatan extends Migration
         $this->forge->addField([
             'id_jabatan' => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 20,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
@@ -21,6 +21,7 @@ class Jabatan extends Migration
             ],
         ]);
         $this->forge->addKey('id_jabatan', true);
+        
         $this->forge->createTable('jabatan');
     }
 

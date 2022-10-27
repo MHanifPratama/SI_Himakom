@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <?= $this->extend('templates/header') ?>
 
 <div class="container-fluid position-relative d-flex p-0">
@@ -15,37 +19,28 @@
 						<thead>
 							<tr>
 								<th scope="col">ID</th>
-								<th scope="col">Nama</th>
-								<th scope="col">NPM</th>
-								<th scope="col">Bidang</th>
-								<th scope="col">Prodi</th>
-								<th scope="col">Status Jabatan</th>
 								<th scope="col">Nama Kepanitiaan</th>
-								<th scope="col">Periode</th>
-								<th scope="col">Opsi</th>
+								<th scope="col">Bidang Penyelenggara</th>
+								<th scope="col">Aksi</th>
 							</tr>
 						</thead>
-						<?php foreach ($Biodata as $Bio) : ?>
+						
+						<?php foreach ($Kepanitiaan as $kepan) : ?>
 							<tbody>
 								<tr>
-									<td><?= $Bio['id_anggota'] ?></td>
-									<td><?= $Bio['nama_anggota'] ?></td>
-									<td><?= $Bio['npm'] ?></td>
-									<td><?= $Bio['nama_bidang'] ?></td>
-									<td><?= $Bio['nama_prodi'] ?></td>
-									<td><?= $Bio['nama_jabatan'] ?></td>
-									<td><?= $Bio['nama_kepanitiaan'] ?></td>
-									<td><?= $Bio['periode'] ?></td>
+									<td><?= $kepan['id_status_kepanitiaan'] ?></td>
+									<td><?= $kepan['nama_kepanitiaan'] ?></td>
+                                    <td><?= $kepan['nama_bidang'] ?></td>
 									<td>
 										<div class="row">
 											<div class="col">
-												<form action="/hapus/<?= $Bio['id_anggota'] ?>" method="post">
+												<form action="/hapus_kepanitiaan/<?= $kepan['id_status_kepanitiaan'] ?>" method="post">
 													<input type="hidden" name="_method" value="DELETE" />
 													<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i class="fa fa-trash"></i></button>
 												</form>
 											</div>
 											<div class="col">
-												<a class="btn btn-dark btn-sm ff-gantari" href="/edit/<?= $Bio['id_anggota'] ?>"><i class="fa fa-pen"></i></a>
+												<a class="btn btn-dark btn-sm ff-gantari" href="/edit_kepanitiaan/<?= $kepan['id_status_kepanitiaan'] ?>"><i class="fa fa-pen"></i></a>
 											</div>
 										</div>
 									</td>
@@ -77,8 +72,7 @@
 	</div>
 </footer>
 <!-- Back to Top -->
-<a href="\tambah" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="bi bi-plus text-dark"></i></a>
-<a href="\viewCetak" class="btn btn-lg btn-light btn-lg-square back-to-top mx-5"><i class="bi bi-printer text-dark"></i></a>
+<a href="\tambahKepanitiaan" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="bi bi-plus text-dark"></i></a>
 </div>
 
 

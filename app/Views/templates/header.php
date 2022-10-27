@@ -36,9 +36,9 @@
 </head>
 
 <body>
-	<div class="container-fluid position-relative d-flex p-0">
+	<!-- <div class="container-fluid position-relative d-flex p-0"> -->
 		<!-- Sidebar Start -->
-		<div class="sidebar pe-4 py-3">
+		<!-- <div class="sidebar pe-4 py-3">
 			<nav class="navbar bg-secondary navbar-dark">
 				<div class="d-flex align-items-center ms-4 mb-4">
 					<div class="position-relative">
@@ -62,7 +62,7 @@
 					<a href="" class="nav-item nav-link active ff-gantari"><i class="fa fa-table me-2"></i>Tabel</a>
 				</div>
 			</nav>
-		</div>
+		</div> -->
 		<!-- Sidebar End -->
 
 
@@ -116,7 +116,10 @@
 							<a href="/listProdi" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Program Studi</a>
 						</div>
 						<div class="navbar-nav w-100">
-							<a href="/listBidang" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Bidang</a>
+							<a href="/listBidang" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-badge-fill me-2"></i>Bidang</a>
+						</div>
+						<div class="navbar-nav w-100">
+							<a href="/listKepanitiaan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Kepanitiaan</a>
 						</div>
 					</nav>
 				</div>

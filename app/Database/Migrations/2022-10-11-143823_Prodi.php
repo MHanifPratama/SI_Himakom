@@ -11,7 +11,7 @@ class Prodi extends Migration
         $this->forge->addField([
             'id_prodi' => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 20,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],

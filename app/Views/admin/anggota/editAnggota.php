@@ -52,7 +52,19 @@
                                     <?php endif ?>
                                 <?php endforeach; ?>
                             </select>
-                            <label for="status_jabatan">Status Jawaban</label>
+                            <label for="status_jabatan">Status Jabatan</label>
+                        </div>
+                        <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
+                            <select class="form-select text-light" id="status_kepanitiaan" name="status_kepanitiaan" aria-label="Status Jabatan">
+                                <?php foreach ($Kepanitiaan as $kepanitiaan) : ?>
+                                    <?php if ($kepanitiaan['id_status_kepanitiaan'] == $Biodata['id_status_kepanitiaan']) : ?>
+                                        <option selected value="<?= $kepanitiaan['id_status_kepanitiaan'] ?>"><?= $kepanitiaan['nama_kepanitiaan'] ?></option>
+                                    <?php else : ?>
+                                        <option value="<?= $kepanitiaan['id_status_kepanitiaan'] ?>"><?= $kepanitiaan['nama_kepanitiaan'] ?></option>
+                                    <?php endif ?>
+                                <?php endforeach; ?>
+                            </select>
+                            <label for="status_kepanitiaan">Status Jabatan</label>
                         </div>
                         <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                             <input type="text" class="form-control text-light" id="periode" name="periode" value="<?= $Biodata['periode'] ?>">

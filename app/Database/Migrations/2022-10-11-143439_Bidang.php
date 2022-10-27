@@ -11,7 +11,7 @@ class Bidang extends Migration
         $this->forge->addField([
             'id_bidang' => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 20,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
@@ -29,6 +29,7 @@ class Bidang extends Migration
             ],
         ]);
         $this->forge->addKey('id_bidang', true);
+        
         $this->forge->createTable('bidang');
     }
 

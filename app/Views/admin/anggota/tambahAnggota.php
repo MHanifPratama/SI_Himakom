@@ -44,6 +44,15 @@
                             <label for="status_jabatan">Status Jabatan</label>
                         </div>
                         <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
+                            <select class="form-select text-light" type="text" name="status_kepanitiaan" id="status_kepanitiaan">
+                                <?php foreach ($Kepanitiaan as $Kepanitiaan) : ?>
+                                    <option value="<?= $Kepanitiaan['id_status_kepanitiaan'] ?>"><?= $Kepanitiaan['nama_kepanitiaan'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <label for="status_kepanitiaan">Status Kepanitiaan</label>
+                        </div>
+
+                        <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                             <input type="text" class="form-control text-light" id="periode" name="periode">
                             <label for="periode">Periode</label>
                         </div>

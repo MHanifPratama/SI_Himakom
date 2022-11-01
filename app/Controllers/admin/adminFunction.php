@@ -72,14 +72,14 @@ class adminFunction extends BaseController
         ];
 
         $BiodataModel->save($data);
-        return redirect()->to('/');
+        return redirect()->to('/list_anggota');
     }
     public function hapus($id)
     {
         $BiodataModel = new Biodata();
         $BiodataModel->delete($id);
     
-        return redirect()->to('/');
+        return redirect()->to('/list_anggota');
     
     }
     public function hapusSemuaData()
@@ -94,7 +94,7 @@ class adminFunction extends BaseController
         $prodi->delete();
         $bidang->delete();
         
-        return redirect()->to('/');
+        return redirect()->to('/list_anggota');
     
     }
     public function edit($id){
@@ -144,7 +144,7 @@ class adminFunction extends BaseController
         ];
 
         $mahasiswaModel->update($id, $data);
-        return redirect()->to('/');
+        return redirect()->to('/list_anggota');
     }
     public function viewCetak(){
         $biodata = new Biodata();

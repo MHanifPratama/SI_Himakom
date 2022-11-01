@@ -107,7 +107,7 @@
 						</div>
 
 						<div class="navbar-nav w-100">
-							<a href="/" class="<?= "nav-item nav-link ff-gantari" ?>"><i class="fa fa-table me-2"></i>Tabel</a>
+							<a href="/list_anggota" class="<?= "nav-item nav-link ff-gantari" ?>"><i class="fa fa-table me-2"></i>Tabel</a>
 						</div>
 						<div class="navbar-nav w-100">
 							<a href="/listJabatan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Jabatan</a>
@@ -121,6 +121,10 @@
 						<div class="navbar-nav w-100">
 							<a href="/listKepanitiaan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Kepanitiaan</a>
 						</div>
+						<div class="navbar-nav w-100">
+							<a href="/logoutAdmin" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Logout</a>
+						</div>
+						
 					</nav>
 				</div>
 				<?= $this->renderSection('content') ?>

@@ -192,6 +192,14 @@ class HimakomSeeder extends Seeder
             ]
 
         ];
+        $dataAdmin=[
+            [
+                'nama_admin'  =>  'M Hanif Pratama',
+                'email'  =>  'admin@gmail.com',
+                'password'  =>  password_hash(12345678,PASSWORD_DEFAULT),
+            ],
+        ];
+        $this->db->table('akun_admin')->insertBatch($dataAdmin);
         $this->db->table('jabatan')->insertBatch($dataJabatan);
         $this->db->table('kepanitiaan')->insertBatch($dataKepanitiaan);
         $this->db->table('prodi')->insertBatch($dataProdi);

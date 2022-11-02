@@ -37,7 +37,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Home::index');
-
+$routes->get('/viewKeanggotaan', 'Home::viewKeanggotaan');
+$routes->post('/cariKeanggotaan', 'Home::cariKeanggotaan');
 
 $routes->get('/loginAdmin', 'admin\loginFunction::viewLogin');
 $routes->post('/verifyLogin', 'admin\loginFunction::verifyLoginAdmin');

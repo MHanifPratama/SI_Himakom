@@ -1,18 +1,22 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Controllers\BaseController;
+use App\Models\Admin\Bidang;
+use App\Models\Admin\Biodata;
+use App\Models\Admin\Kepanitiaan;
 class Home extends BaseController
 {
     public function index()
     {
-<<<<<<< Updated upstream
         return view('admin\list');
-=======
         $model = new Bidang();
         $modelBiodata = new Biodata();
         $modelProgja = new Kepanitiaan();
         $dataProgja = $modelProgja->join('bidang','bidang.id_bidang=kepanitiaan.id_bidang')->get()->getResultArray();;
+        $model = new Bidang();
+        $modelBiodata = new Biodata();
+        $modelProgja = new Kepanitiaan();
         $modelBidang = new Bidang();
         // $data['bidang'] = $model->findAll();
         $data = [
@@ -40,6 +44,5 @@ class Home extends BaseController
             'hasil' => $hasil,
         ];
         return view('home\hasilPencarian',$data);
->>>>>>> Stashed changes
     }
 }

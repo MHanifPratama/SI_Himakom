@@ -262,6 +262,7 @@
         <div class="row">
           <?php foreach ($progja as $progja) : ?>
             <?php if($progja['id_status_kepanitiaan']!="1"): ?>
+
           <div class="col-md-4">
             <div class="work-box">
               <a href="assetsHome/DevFolio/assets/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
@@ -316,7 +317,6 @@
                     </div>
                   </div>
                 </div><!-- End testimonial item -->
-
               </div>
               <div class="swiper-pagination"></div>
             </div>

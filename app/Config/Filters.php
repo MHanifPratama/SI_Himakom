@@ -18,6 +18,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $aliases = [
+        'authAdmin'     => \App\Filters\AdminAuth::class,
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,

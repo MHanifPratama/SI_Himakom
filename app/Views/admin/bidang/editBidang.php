@@ -9,7 +9,7 @@
             <div class="col-12">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h5 class="mb-4 ff-gantari">Edit Anggota</h5>
-                    <form action="/update_bidang/<?= $Bidang['id_bidang'] ?>" method="post">
+                    <form action="/update_bidang/<?= $Bidang['id_bidang'] ?>" method="post" enctype="multipart/form-data">
                         <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                             <input type="text" class="form-control text-light" id="nama_bidang" name="nama_bidang" value="<?= $Bidang['nama_bidang'] ?>">
                             <label for="nama_bidang">Nama Bidang</label>
@@ -22,6 +22,15 @@
                             <textarea type="text" class="form-control text-light" id="misi" name="misi"><?= $Bidang['misi'] ?></textarea>
                             <label for="misi">Misi</label>
                         </div>
+                        <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
+                        <?php if (!empty($Bidang['logo_bidang'])):?>
+                            <img src="/assets/img/logoBidang/<?=$Bidang['logo_bidang']?>" alt="Avatar" style="width:60px;height:60px;">
+                        <?php else:?>
+                            <h1>Maaf</h1>
+                        <?php endif; ?>
+                        <input class="form-control" type="file" id="logo_bidang" name="logo_bidang" value="/assets/img/logoBidang/<?=$Bidang['logo_bidang']?>">
+                        </div>
+                        
                         <button type="submit" class="btn btn-primary text-dark ff-gantari"><i class="fa fa-paper-plane"></i> Submit</button>
                     </form>
                 </div>

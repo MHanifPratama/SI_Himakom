@@ -58,8 +58,6 @@ class Biodata extends Migration
         $this->forge->addForeignKey('id_prodi', 'prodi', 'id_prodi', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('id_jabatan', 'jabatan', 'id_jabatan', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('id_status_kepanitiaan', 'kepanitiaan', 'id_status_kepanitiaan', 'CASCADE', 'CASCADE');
-        // $db = db_connect();
-        // $db->query("ALTER TABLE `biodata` ADD CONSTRAINT `jabatan_ibfk` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan`(`id_jabatan`) ON DELETE CASCADE ON UPDATE CASCADE");
         $this->forge->createTable('biodata');
         // $db->query('ALTER TABLE `biodata` ADD CONSTRAINT `jabatan_ibfk` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan`(`id_jabatan`) ON DELETE CASCADE ON UPDATE CASCADE');
         

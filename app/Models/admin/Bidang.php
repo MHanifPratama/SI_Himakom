@@ -11,6 +11,6 @@ class Bidang extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['id_bidang','nama_bidang', 'visi','misi'];
+    protected $allowedFields = ['id_bidang','nama_bidang', 'visi','misi','logo_bidang'];
 }
 ?>

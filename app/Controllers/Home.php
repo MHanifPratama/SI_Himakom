@@ -9,6 +9,11 @@ class Home extends BaseController
 {
     public function index()
     {
+        return view('admin\list');
+        $model = new Bidang();
+        $modelBiodata = new Biodata();
+        $modelProgja = new Kepanitiaan();
+        $dataProgja = $modelProgja->join('bidang','bidang.id_bidang=kepanitiaan.id_bidang')->get()->getResultArray();;
         $model = new Bidang();
         $modelBiodata = new Biodata();
         $modelProgja = new Kepanitiaan();
@@ -20,6 +25,7 @@ class Home extends BaseController
             'totalAnggota'=> $modelBiodata->countAllResults(),
             'totalProgja'=> $modelProgja->countAllResults(),
             'totalBidang'=> $modelBidang->countAllResults(),
+            'progja' => $dataProgja
         ];
         // echo var_dump($data['totalProgja']);
         return view('home\home',$data);

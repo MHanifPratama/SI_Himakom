@@ -213,7 +213,7 @@
               </div>
               <div class="counter-num">
                 <p data-purecounter-start="0" data-purecounter-end="<?=$totalAnggota?>" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">TOTAL ANGGOTA</span>
+                <span class="counter-text">TOTAL PENGURUS</span>
               </div>
             </div>
           </div>
@@ -260,19 +260,22 @@
           </div>
         </div>
         <div class="row">
+          <?php foreach ($progja as $progja) : ?>
+            <?php if($progja['id_status_kepanitiaan']!="1"): ?>
+
           <div class="col-md-4">
             <div class="work-box">
               <a href="assetsHome/DevFolio/assets/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="assetsHome/DevFolio/assets/img/work-1.jpg" alt="" class="img-fluid">
+                  <img src="/assets/img/logoBidang/<?=$progja['logo_bidang']?>" alt="" class="img-fluid">
                 </div>
               </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Lorem impsum dolor</h2>
+                    <h2 class="w-title"><?=$progja["nama_kepanitiaan"] ?></h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory"><?=$progja["nama_bidang"] ?></span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -284,127 +287,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assetsHome/DevFolio/assets/img/work-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assetsHome/DevFolio/assets/img/work-2.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assetsHome/DevFolio/assets/img/work-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assetsHome/DevFolio/assets/img/work-3.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assetsHome/DevFolio/assets/img/work-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assetsHome/DevFolio/assets/img/work-4.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Bindo Laro Cado</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assetsHome/DevFolio/assets/img/work-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assetsHome/DevFolio/assets/img/work-5.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Studio Lena Mado</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assetsHome/DevFolio/assets/img/work-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assetsHome/DevFolio/assets/img/work-6.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Studio Big Bang</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <?php endif;?>
+          <?php endforeach; ?>
         </div>
       </div>
     </section><!-- End Portfolio Section -->
@@ -424,21 +308,6 @@
                     <div class="author-test">
                       <img src="assetsHome/DevFolio/assets/img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
                       <span class="author">Xavi Alonso</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="assetsHome/DevFolio/assets/img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">Marta Socrate</span>
                     </div>
                     <div class="content-test">
                       <p class="description lead">

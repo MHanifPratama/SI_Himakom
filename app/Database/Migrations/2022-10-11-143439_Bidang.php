@@ -27,6 +27,10 @@ class Bidang extends Migration
                 'type'     => 'VARCHAR',
                 'constraint' => 1000,
             ],
+            'logo_bidang' => [
+                'type'     => 'VARCHAR',
+                'constraint' => 1000,
+            ],
         ]);
         $this->forge->addKey('id_bidang', true);
         

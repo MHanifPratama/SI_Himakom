@@ -45,8 +45,8 @@
           <li><a class="nav-link scrollto " href="/viewKeanggotaan">Cari Keanggotaan</a></li>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#work">Work</a></li>
+          <li><a class="nav-link scrollto" href="#services">Bidang, Biro, dan Badan</a></li>
+          <li><a class="nav-link scrollto " href="#work">Program Kerja</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -175,13 +175,14 @@
             </div>
           </div>
         </div>
+        <div class="d-flex">
         <div class="row">
+        <?php foreach ($bidang as $bidang) : ?>
           <div class="col-md-4">
-            <?php foreach ($bidang as $bidang) : ?>
             <?php if ($bidang['nama_bidang']!='Tidak Ada'):?>
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+                <span class="ico-circle"><img src="/assets/img/logoBidang/<?=$bidang['logo_bidang']?>" alt="Avatar" style="width:60px;height:60px;"></i></span>
               </div>
               <div class="service-content">
                 <h2 class="s-title"><?= $bidang['nama_bidang']?></h2>
@@ -191,13 +192,16 @@
               </div>
             </div>
             <?php endif; ?>
-            <?php endforeach; ?>
+           
           </div>
+          <?php endforeach; ?>
+        </div>
         </div>
       </div>
     </section><!-- End Services Section -->
 
     <!-- ======= Counter Section ======= -->
+    <!-- <div class="section-counter paralax-mf bg-image" style="background-image: url(assetsHome/DevFolio/assets/img/counters-bg.jpg)"> -->
     <div class="section-counter paralax-mf bg-image" style="background-image: url(assetsHome/DevFolio/assets/img/counters-bg.jpg)">
       <div class="overlay-mf"></div>
       <div class="container position-relative">

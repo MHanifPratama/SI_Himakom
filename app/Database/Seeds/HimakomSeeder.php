@@ -16,6 +16,7 @@ class HimakomSeeder extends Seeder
                 Meningkatkan empati kebersamaan antar mahasiswa jurusan ilmu komputer.
                 Membangun hubungan dan kerja sama yang baik antar civitas akademika jurusan ilmu komputer.
                 Memberikan wadah aspirasi kepada mahasiswa jurusan ilmu komputer.',
+                'logo_bidang'  => 'Presidium.png',
             ],
             [
                 'nama_bidang'  =>  'Badan Khusus',
@@ -24,6 +25,7 @@ class HimakomSeeder extends Seeder
                 Mempersiapkan asisten dosen yang kreatif, komunikatif, dan bertanggung jawab.
                 Memberdayakan fasilitas laboratorium Jurusan Ilmu Komputer untuk kelancaran kegiatan asistensi secara maksimal.
                 Membangun dan menjaga komunikasi  yang baik antar sesama asisten dosen serta asisten dosen dengan badan khusus.',
+                'logo_bidang'  => 'Bansus.png',
             ],
             [
                 'nama_bidang'  =>  'Kaderisasi',
@@ -31,6 +33,7 @@ class HimakomSeeder extends Seeder
                 'misi'  =>  'Menanamkan sikap tanggung jawab dan disiplin waktu khususnya pada setiap individu dalam kader himakom.
                 Menciptakan rasa kepedulian dan kekeluargaan dalam setiap kegiatan yang di selenggarakan oleh himakom.
                 Mengoptimalkan fungsi pengkaderan yang baik dalam mewujudkan jiwa kepemimpinan dalam setiap calon kader himakom.',
+                'logo_bidang'  => 'Kaderisasi.png',
             ],
             [
                 'nama_bidang'  =>  'Keilmuan',
@@ -38,6 +41,7 @@ class HimakomSeeder extends Seeder
                 'misi'  =>  'Menginovasi, melanjutkan, dan mendayagunakan program kerja yang dapat memperluas pengetahuan bidang teknologi informasi di lingkup Jurusan Ilmu Komputer FMIPA Universitas Lampung.
                 Memfasilitasi pengembangan minat bakat melalui kegiatan yang melatih soft skill, hard skill, dan life skill yang dapat mendukung peningkatan prestasi serta keterampilan mahasiswa melalui kerjasama dengan pihak Jurusan Ilmu Komputer FMIPA Universitas Lampung.
                 Menyalurkan sarana informasi yang dapat menunjang pengetahuan terkait teknologi informasi setiap mahasiswa Jurusan Ilmu Komputer FMIPA Universitas Lampung.',
+                'logo_bidang'  => 'Keilmuan.png',
             ],
             [
                 'nama_bidang'  =>  'Internal',
@@ -45,6 +49,7 @@ class HimakomSeeder extends Seeder
                 'misi'  =>  'Membentuk hubungan yang lebih erat antar civitas akademika Jurusan Ilmu komputer.
 
                 Meningkatkan komunikasi yang baik untuk memperkuat solidaritas dalam kepengurusan Himpunan Mahasiswa Jurusan Ilmu Komputer.',
+                'logo_bidang'  => 'Internal.png',
             ],
             [
                 'nama_bidang'  =>  'Eksternal',
@@ -54,6 +59,7 @@ class HimakomSeeder extends Seeder
                 Mewujudkan program kerja yang telah dibuat untuk memajukan rasa simpati antar sesama.
                 
                 Berpartisipasi dan menjalin hubungan yang baik dengan instansi di Bandar Lampung.',
+                'logo_bidang'  => 'Eksternal.png',
             ],
             [
                 'nama_bidang'  =>  'Media dan Informasi',
@@ -64,6 +70,7 @@ class HimakomSeeder extends Seeder
                 kemampuan multimedia.
                 Memperkenalkan Himakom di Lingkungan FMIPA UNILA dengan mengadakan pelatihan multimedia.
                 Meningkatkan kerjasama dan kreatifitas anggota Bidang Medinfo.',
+                'logo_bidang'  => 'Medinfo.png',
             ],
             [
                 'nama_bidang'  =>  'Biro Kesekretariatan',
@@ -71,6 +78,7 @@ class HimakomSeeder extends Seeder
                 'misi'  =>  'Sebagai pusat data dalam penyelenggaraan administrasi dan memenuhi kepentingan kesekretariatan
                 Bekerja sama dengan Sekretaris Umum dalam mengelola administrasi internal Himakom
                 Pendokumentasian surat dilaksanakan dengan konsisten dan terstruktur, guna memaksimalkan kinerja Biro Kesekretariatan',
+                'logo_bidang'  => 'KSR.png',
             ],
             [
                 'nama_bidang'  =>  'Biro Kewirausahaan',
@@ -79,11 +87,13 @@ class HimakomSeeder extends Seeder
                 Mampu bergerak secara aktif dalam mencari pendanaan untuk financial Himakom Unila.
                 Dapat mengamati secara cermat, efektif, dan efisien setiap peluang yang ada.
                 Membangun jaringan dan dukungan demi kelancaran dan usaha dan keuangan yang dilakukan.',
+                'logo_bidang'  => 'KWU.png',
             ],
             [
                 'nama_bidang'  =>  'Tidak Ada',
                 'visi'  => 'Tidak Ada',
                 'misi'  =>  'Tidak Ada',
+                'logo_bidang'  => 'cat-who.jpg',
             ],
         ];
         $dataProdi = [

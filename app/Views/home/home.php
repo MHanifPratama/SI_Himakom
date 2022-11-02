@@ -179,7 +179,7 @@
         <div class="row">
         <?php foreach ($bidang as $bidang) : ?>
           <div class="col-md-4">
-            <?php if ($bidang['nama_bidang']!='Tidak Ada'):?>
+            <?php if ($bidang['id_bidang']!='10'):?>
             <div class="service-box">
               <div class="service-ico">
                 <span class="ico-circle"><img src="/assets/img/logoBidang/<?=$bidang['logo_bidang']?>" alt="Avatar" style="width:60px;height:60px;"></i></span>
@@ -234,8 +234,8 @@
                 <span class="ico-circle"><i class="bi bi-person-rolodex"></i></span>
               </div>
               <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="<?=$totalBidang?>" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">TOTAL BIDANG</span>
+                <p data-purecounter-start="0" data-purecounter-end="<?=$totalBidang - 1?>" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text">TOTAL BIDANG, BIRO, dan BADAN</span>
               </div>
             </div>
           </div>

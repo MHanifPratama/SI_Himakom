@@ -29,22 +29,31 @@ class bidangFunction extends BaseController
             'nama_bidang'=>'required',
             'visi'=>'required',
             'misi'=>'required',
+            'logo_bidang' => 'uploaded[logo_bidang]','mime_in[logo_bidang,image/jpg,image/jpeg,image/gif,image/png]','max_size[logo_bidang,4096]',
         ])){
-            return redirect()->to('/simpan_bidang');
+            return redirect()->to('/tambahBidang');
         }
         $BiodataModel = new Bidang();
+        $dataBerkas = $this->request->getFile('logo_bidang');
+        $namaBerkas = $dataBerkas->getRandomName();
         $data = [
             'nama_bidang' => $this -> request -> getPost('nama_bidang'),
             'visi' => $this -> request -> getPost('visi'),
             'misi' => $this -> request -> getPost('misi'),
+            'logo_bidang' => $namaBerkas,
         ];
-
+        $dataBerkas->move(ROOTPATH . 'public/assets/img/logoBidang/', $namaBerkas);
         $BiodataModel->save($data);
         return redirect()->to('/listBidang');
     }
     public function hapus($id)
     {
         $BiodataModel = new Bidang();
+        $dataBiodata = $BiodataModel->find($id);
+        $berkas = $dataBiodata['logo_bidang'];
+        if(file_exists(ROOTPATH . 'public/assets/img/logoBidang/' . $berkas)){
+            unlink(ROOTPATH . 'public/assets/img/logoBidang/' . $berkas);
+        }
         $BiodataModel->delete($id);
         return redirect()->to('/listBidang');
     }
@@ -58,13 +67,36 @@ class bidangFunction extends BaseController
         return view('admin\bidang\editBidang', $data);
     }
     public function update($id){
+        if(!$this->validate([
+            'nama_bidang'=>'required',
+            'visi'=>'required',
+            'misi'=>'required',
+            // 'logo_bidang' => 'uploaded[logo_bidang]','mime_in[logo_bidang,image/jpg,image/jpeg,image/gif,image/png]','max_size[logo_bidang,4096]',
+        ])){
+            return redirect()->to('/tambahBidang');
+        }
+        
         $BiodataModel = new Bidang();
+        $dataBerkasId = $BiodataModel->find($id);
+        $dataBerkas = $this->request->getFile('logo_bidang');
+        if($dataBerkas->isValid() && !$dataBerkas->hasMoved()){
+            $berkasLama = $dataBerkasId['logo_bidang'];
+            if(file_exists(ROOTPATH . 'public/assets/img/logoBidang/' . $berkasLama)){
+                unlink(ROOTPATH . 'public/assets/img/logoBidang/' . $berkasLama);
+            }
+            $namaBerkas = $dataBerkas->getRandomName();
+            $dataBerkas->move(ROOTPATH . 'public/assets/img/logoBidang/', $namaBerkas);
+        }
+        else{
+            $namaBerkas = $dataBerkasId['logo_bidang'];
+        }
+
         $data = [
             'nama_bidang' => $this -> request -> getPost('nama_bidang'),
             'visi' => $this -> request -> getPost('visi'),
             'misi' => $this -> request -> getPost('misi'),
+            'logo_bidang' => $namaBerkas,
         ];
-
         $BiodataModel->update($id,$data);
         return redirect()->to('/listBidang');
     }

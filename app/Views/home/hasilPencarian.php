@@ -70,7 +70,7 @@
 						</table>
 						<?php endforeach; ?>
 						<?php else : ?>
-						<h1>Maaf Data Tidak Ditemukan</h1>
+						<h1>Maaf, Data Tidak Ditemukan</h1>
 						<?php endif; ?>
 					</div>
 				</div>

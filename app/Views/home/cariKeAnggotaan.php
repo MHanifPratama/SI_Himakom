@@ -87,11 +87,3 @@
 </body>
 
 </html>
-
-<!-- <body>
-	<form action="/cariKeanggotaan" method="post">
-		<label for="npm">Masukan NPM Anda</label><br>
-		<input type="text" id="npm" name="npm" required><br>
-		<input type="submit" value="Submit">
-	</form>
-</body> -->

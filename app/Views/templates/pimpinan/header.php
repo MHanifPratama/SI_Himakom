@@ -17,8 +17,10 @@
 	<!-- Google Web Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 
 	<!-- Icon Font Stylesheet -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -51,7 +53,9 @@
 				<div class="d-flex align-items-center ms-4 mt-2 mb-4">
 					<div class="position-relative">
 						<img class="rounded-circle" src="/assets/img/cat.jpg" style="width: 40px; height: 40px;">
-						<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+						<div
+							class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+						</div>
 					</div>
 					<div class="ms-3">
 						<h6 class="mb-0 ff-gantari">Kucing</h6>
@@ -82,7 +86,7 @@
 				</div>
 			</nav>
 			<!-- Navbar End -->
-			
+
 			<!-- Sidebar Start -->
 			<div class="container-fluid position-relative d-flex p-0">
 				<div class="sidebar pe-4 py-3">
@@ -91,23 +95,27 @@
 							<div class="position-relative">
 								<img class="rounded-circle mb-2" src="/assets/img/himakom.png" style="height: 30px;">
 							</div>
-							<a href="">
-								<h3 class="ff-gantari ms-2"></i>SIHIMA</h3>
+							<a href="" class="text-decoration-none">
+								<h3 class="ff-gantari ms-2 fw-bold text-primary"></i>SIHIMA</h3>
 							</a>
 						</div>
 						<div class="d-flex align-items-center ms-4 mt-2 mb-4">
 							<div class="position-relative">
-								<img class="rounded-circle" src="/assets/img/cat-who.jpg" style="width: 40px; height: 40px;">
-								<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+								<img class="rounded-circle" src="/assets/img/cat-who.jpg"
+									style="width: 40px; height: 40px;">
+								<div
+									class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+								</div>
 							</div>
 							<div class="ms-3">
 								<h6 class="mb-0 ff-gantari">Kucing</h6>
-								<span class="ff-gantari">Pimpinan</span>
+								<span class="ff-gantari text-white-50">Pimpinan</span>
 							</div>
 						</div>
 
 						<div class="navbar-nav w-100">
-							<a href="/listLaporan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Laporan</a>
+							<a href="/listLaporan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+									class="bi bi-person-lines-fill me-2"></i>Laporan</a>
 						</div>
 
 					</nav>

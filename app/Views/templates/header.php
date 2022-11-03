@@ -17,8 +17,10 @@
 	<!-- Google Web Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 
 	<!-- Icon Font Stylesheet -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -37,8 +39,8 @@
 
 <body>
 	<!-- <div class="container-fluid position-relative d-flex p-0"> -->
-		<!-- Sidebar Start -->
-		<!-- <div class="sidebar pe-4 py-3">
+	<!-- Sidebar Start -->
+	<!-- <div class="sidebar pe-4 py-3">
 			<nav class="navbar bg-secondary navbar-dark">
 				<div class="d-flex align-items-center ms-4 mb-4">
 					<div class="position-relative">
@@ -63,73 +65,81 @@
 				</div>
 			</nav>
 		</div> -->
-		<!-- Sidebar End -->
+	<!-- Sidebar End -->
 
 
-		<!-- Content Start -->
-		<div class="content">
-			<!-- Navbar Start -->
-			<nav class="navbar navbar-expand bg-dark navbar-dark sticky-top px-4 py-3">
-				<a href="" class="navbar-brand d-flex d-lg-none me-4">
-				</a>
-				<a href="#" class="sidebar-toggler flex-shrink-0">
-					<i class="fa fa-bars"></i>
-				</a>
-				<form class="d-none d-md-flex ms-4">
-					<input class="form-control bg-dark border-0" type="search" placeholder="Search">
-				</form>
-				<div class="navbar-nav align-items-center ms-auto">
-				</div>
-			</nav>
-			<!-- Navbar End -->
-			
-			<!-- Sidebar Start -->
-			<div class="container-fluid position-relative d-flex p-0">
-				<div class="sidebar pe-4 py-3">
-					<nav class="navbar bg-secondary navbar-dark">
-						<div class="d-flex align-items-center ms-4 mb-4">
-							<div class="position-relative">
-								<img class="rounded-circle mb-2" src="/assets/img/himakom.png" style="height: 30px;">
-							</div>
-							<a href="">
-								<h3 class="ff-gantari ms-2"></i>SIHIMA</h3>
-							</a>
-						</div>
-						<div class="d-flex align-items-center ms-4 mt-2 mb-4">
-							<div class="position-relative">
-								<img class="rounded-circle" src="/assets/img/cat.jpg" style="width: 40px; height: 40px;">
-								<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-							</div>
-							<div class="ms-3">
-								<h6 class="mb-0 ff-gantari">Kucing</h6>
-								<span class="ff-gantari">Admin</span>
-							</div>
-						</div>
-
-						<div class="navbar-nav w-100">
-							<a href="/list_anggota" class="<?= "nav-item nav-link ff-gantari" ?>"><i class="fa fa-table me-2"></i>Tabel</a>
-						</div>
-						<div class="navbar-nav w-100">
-							<a href="/listJabatan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Jabatan</a>
-						</div>
-						<div class="navbar-nav w-100">
-							<a href="/listProdi" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Program Studi</a>
-						</div>
-						<div class="navbar-nav w-100">
-							<a href="/listBidang" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-badge-fill me-2"></i>Bidang</a>
-						</div>
-						<div class="navbar-nav w-100">
-							<a href="/listKepanitiaan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Kepanitiaan</a>
-						</div>
-						<div class="navbar-nav w-100">
-							<a href="/logoutAdmin" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i class="bi bi-person-lines-fill me-2"></i>Logout</a>
-						</div>
-						
-					</nav>
-				</div>
-				<?= $this->renderSection('content') ?>
+	<!-- Content Start -->
+	<div class="content">
+		<!-- Navbar Start -->
+		<nav class="navbar navbar-expand bg-dark navbar-dark sticky-top px-4 py-3">
+			<a href="" class="navbar-brand d-flex d-lg-none me-4">
+			</a>
+			<a href="#" class="sidebar-toggler flex-shrink-0">
+				<i class="fa fa-bars"></i>
+			</a>
+			<form class="d-none d-md-flex ms-4">
+				<input class="form-control bg-dark border-0" type="search" placeholder="Search">
+			</form>
+			<div class="navbar-nav align-items-center ms-auto">
 			</div>
+		</nav>
+		<!-- Navbar End -->
+
+		<!-- Sidebar Start -->
+		<div class="container-fluid position-relative d-flex p-0">
+			<div class="sidebar pe-4 py-3">
+				<nav class="navbar bg-secondary navbar-dark">
+					<div class="d-flex align-items-center ms-4 mb-4">
+						<div class="position-relative">
+							<img class="rounded-circle mb-2" src="/assets/img/himakom.png" style="height: 30px;">
+						</div>
+						<a href="" class="text-decoration-none">
+							<h3 class="ff-gantari ms-2 fw-bold text-primary"></i>SIHIMA</h3>
+						</a>
+					</div>
+					<div class="d-flex align-items-center ms-4 mt-2 mb-4">
+						<div class="position-relative">
+							<img class="rounded-circle" src="/assets/img/cat.jpg" style="width: 40px; height: 40px;">
+							<div
+								class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+							</div>
+						</div>
+						<div class="ms-3">
+							<h6 class="mb-0 ff-gantari">Kucing</h6>
+							<span class="ff-gantari text-white-50">Admin</span>
+						</div>
+					</div>
+
+					<div class="navbar-nav w-100">
+						<a href="/list_anggota" class="<?= "nav-item nav-link ff-gantari" ?>"><i
+								class="fa fa-table me-2"></i>Tabel</a>
+					</div>
+					<div class="navbar-nav w-100">
+						<a href="/listJabatan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+								class="bi bi-person-lines-fill me-2"></i>Jabatan</a>
+					</div>
+					<div class="navbar-nav w-100">
+						<a href="/listProdi" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+								class="bi bi-person-lines-fill me-2"></i>Program Studi</a>
+					</div>
+					<div class="navbar-nav w-100">
+						<a href="/listBidang" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+								class="bi bi-person-badge-fill me-2"></i>Bidang</a>
+					</div>
+					<div class="navbar-nav w-100">
+						<a href="/listKepanitiaan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+								class="bi bi-person-lines-fill me-2"></i>Kepanitiaan</a>
+					</div>
+					<div class="navbar-nav w-100">
+						<a href="/logoutAdmin" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+								class="bi bi-person-lines-fill me-2"></i>Logout</a>
+					</div>
+
+				</nav>
+			</div>
+			<?= $this->renderSection('content') ?>
 		</div>
+	</div>
 	</div>
 	<!-- Navbar End -->
 	<!-- JavaScript Libraries -->

@@ -87,6 +87,11 @@ $routes->post('/update_kepanitiaan/(:num)', 'admin\kepanitiaanFunction::update/$
 
 $routes->get('/test', 'pimpinan\anggotaFunction::list_laporan');
 $routes->get('/listLaporan', 'pimpinan\laporanFunction::list_laporan');
+<<<<<<< Updated upstream
+=======
+$routes->post('/cetakSK', 'pimpinan\laporanFunction::cetak_sk');
+
+>>>>>>> Stashed changes
 /*
  * --------------------------------------------------------------------
  * Additional Routing

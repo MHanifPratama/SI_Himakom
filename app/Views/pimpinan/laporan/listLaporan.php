@@ -6,14 +6,15 @@
 		<div class="col-12">
 			<div class="bg-secondary rounded h-100 p-4">
 				<h5 class="mb-4 ff-gantari">Laporan</h5>
-				<form action="" method="post">
+				<form action="cetakSK" method="post">
 					<div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
 						<select class="form-select text-light" id="laporan" name="laporan" aria-label="Laporan">
 							<option value="">SK Kepanitiaan</option>
 						</select>
 						<label for="laporan">Jenis Laporan</label>
 					</div>
-					<button disabled type="submit" class="btn btn-primary text-dark ff-gantari"><i class="fa fa-print"></i> Cetak</button>
+					<button type="submit" class="btn btn-primary text-dark ff-gantari"><i class="fa fa-print"></i>
+						Cetak</button>
 				</form>
 			</div>
 		</div>

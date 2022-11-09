@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers\pimpinan;
+
 use App\Controllers\BaseController;
 use App\Models\Admin\Bidang;
 use App\Models\Admin\Biodata;
@@ -8,19 +9,11 @@ use App\Models\Admin\Jabatan;
 use App\Models\Admin\Kepanitiaan;
 use App\Models\Admin\Prodi;
 
-<<<<<<< Updated upstream
 class laporanFunction extends BaseController{
     public function list_laporan(){
         return view('pimpinan\laporan\listLaporan');
     }
-=======
-class laporanFunction extends BaseController
-{
-	public function list_laporan()
-	{
-		
-		return view('pimpinan\laporan\listLaporan');
-	}
+
 
 	public function cetak_sk()
 	{
@@ -38,5 +31,4 @@ class laporanFunction extends BaseController
 		];
 		return view('pimpinan\laporan\cetakSK', $data);
 	}
->>>>>>> Stashed changes
 }

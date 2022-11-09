@@ -9,7 +9,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('admin\list');
+        // return view('admin\list');
         $model = new Bidang();
         $modelBiodata = new Biodata();
         $modelProgja = new Kepanitiaan();

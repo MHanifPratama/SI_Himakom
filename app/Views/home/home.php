@@ -23,11 +23,6 @@
 	<link href="assetsHome/DevFolio/assets/css/style.css" rel="stylesheet">
 
 	<!-- =======================================================
-  * Template Name: DevFolio - v4.9.1
-  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -47,23 +42,23 @@
 					<li><a class="nav-link scrollto" href="#about">About</a></li>
 					<li><a class="nav-link scrollto" href="#services">Bidang, Biro, dan Badan</a></li>
 					<li><a class="nav-link scrollto " href="#work">Program Kerja</a></li>
-					<!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
+					<li class="dropdown"><a href="#"><span class="text-primary">Log In</span> <i
+								class="bi bi-chevron-down"></i></a>
+						<ul>
+							<li><a href="loginAdmin">Adminstrator</a></li>
+							<li><a href="#">Pimpinan Bidang</a></li>
+							<!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+										class="bi bi-chevron-right"></i></a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li> -->
+						</ul>
+					</li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
@@ -81,7 +76,7 @@
 					<!--<p class="display-6 color-d">Hello, world!</p>-->
 					<h1 class="hero-title mb-4">SIHIMA</h1>
 					<p class="hero-subtitle"><span class="typed"
-							data-typed-items="Sistem, Informasi, Himpunan, Mahasiswa"></span></p>
+							data-typed-items="Sistem Informasi Himpunan Mahasiswa"></span></p>
 					<!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
 				</div>
 			</div>
@@ -97,7 +92,7 @@
 					<div class="col-sm-12">
 						<div class="box-shadow-full">
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-7">
 									<div class="row">
 										<div class="col-sm-6 col-md-5">
 											<div class="about-img">
@@ -118,21 +113,21 @@
 									</div>
 									<div class="skill-mf">
 										<p class="title-s">Himakom Universitas Lampung</p>
-										<span>Visi</span>
+										<span class="fw-bold">Visi</span>
 										<div class="service-content">
-											<p class="s-description text-right">
+											<p class="s-description">
 												<?= $bidang[0]['visi'] ?>
 											</p>
 										</div>
-										<span>Misi</span>
+										<span class="fw-bold">Misi</span>
 										<div class="service-content">
-											<p class="s-description text-right">
+											<p class="s-description">
 												<?= $bidang[0]['misi'] ?>
 											</p>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-5">
 									<div class="about-me pt-4 pt-md-0">
 										<div class="title-box-2">
 											<h5 class="title-left">
@@ -152,12 +147,6 @@
 											suscipit tortor eget felis
 											porttitor volutpat. Vestibulum
 											ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-										</p>
-										<p class="lead">
-											Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia
-											in, elementum id enim.
-											Nulla porttitor accumsan
-											tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
 										</p>
 									</div>
 								</div>
@@ -196,7 +185,7 @@
 											style="width:60px;height:60px;"></i></span>
 								</div>
 								<div class="service-content">
-									<h2 class="s-title"><?= $bidang['nama_bidang'] ?></h2>
+									<h2 class="s-title mt-4 mb-3"><?= $bidang['nama_bidang'] ?></h2>
 									<p class="s-description text-center">
 										<?= $bidang['visi'] ?>
 									</p>
@@ -310,48 +299,6 @@
 				</div>
 			</div>
 		</section><!-- End Portfolio Section -->
-
-		<!-- ======= Testimonials Section ======= -->
-		<div class="testimonials paralax-mf bg-image"
-			style="background-image: url(assetsHome/DevFolio/assets/img/overlay-bg.jpg)">
-			<div class="overlay-mf"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-
-						<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-							<div class="swiper-wrapper">
-
-								<div class="swiper-slide">
-									<div class="testimonial-box">
-										<div class="author-test">
-											<img src="assetsHome/DevFolio/assets/img/testimonial-2.jpg" alt=""
-												class="rounded-circle b-shadow-a">
-											<span class="author">Xavi Alonso</span>
-										</div>
-										<div class="content-test">
-											<p class="description lead">
-												Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem
-												ipsum dolor sit amet,
-												consectetur adipiscing elit.
-											</p>
-										</div>
-									</div>
-								</div><!-- End testimonial item -->
-							</div>
-							<div class="swiper-pagination"></div>
-						</div>
-
-						<!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
-          
-        </div> -->
-					</div>
-				</div>
-			</div>
-		</div><!-- End Testimonials Section -->
-
-		<!-- ======= Blog Section ======= -->
-
 		<!-- ======= Contact Section ======= -->
 
 	</main><!-- End #main -->
@@ -362,16 +309,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="copyright-box">
-						<p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
-						<div class="credits">
-							<!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
-							Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-						</div>
+						<p class="copyright">&copy; Copyright <strong>SIHIMA</strong>. All Rights Reserved</p>
 					</div>
 				</div>
 			</div>
@@ -393,6 +331,6 @@
 	<!-- Template Main JS File -->
 	<script src="assetsHome/DevFolio/assets/js/main.js"></script>
 
-</body>
+	</body>
 
 </html>

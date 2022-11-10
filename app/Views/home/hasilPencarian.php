@@ -38,7 +38,7 @@
 </head>
 
 <body class="bg-dark">
-	<div class="container-fluid position-relative d-flex p-0">
+	<div class="container-fluid position-relative d-flex p-0 col-xl-8">
 		<!-- Table Start -->
 		<div class="container-fluid pt-4 px-4">
 			<div class="row g-4">
@@ -78,7 +78,7 @@
 		</div>
 		<!-- Table End -->
 	</div>
-	<footer class="container-fluid pt-4 px-4">
+	<footer class="container-fluid pt-4 px-4 col-xl-8">
 		<div class="bg-secondary rounded-top p-4">
 			<div class="row">
 				<div class="col-12 col-sm-6 text-center text-sm-start text-tertiary ff-gantari">

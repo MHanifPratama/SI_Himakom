@@ -13,7 +13,7 @@ class Home extends BaseController
         $model = new Bidang();
         $modelBiodata = new Biodata();
         $modelProgja = new Kepanitiaan();
-        $dataProgja = $modelProgja->join('bidang','bidang.id_bidang=kepanitiaan.id_bidang')->get()->getResultArray();;
+        $dataProgja = $modelProgja->join('bidang','bidang.id_bidang=kepanitiaan.id_bidang')->get()->getResultArray();
         $model = new Bidang();
         $modelBiodata = new Biodata();
         $modelProgja = new Kepanitiaan();
@@ -37,7 +37,7 @@ class Home extends BaseController
         $modelBiodata = new Biodata();
         $hasil = $modelBiodata->join('bidang','bidang.id_bidang = biodata.id_bidang')
         ->join('prodi','prodi.id_prodi =biodata.id_prodi')
-        ->join('jabatan','jabatan.id_jabatan = biodata.id_jabatan')->like('biodata.npm', $this->request->getVar('npm'))->findAll();
+        ->join('jabatan','jabatan.id_jabatan = biodata.id_jabatan')->where('biodata.npm', $this->request->getVar('npm'))->findAll();
         // echo var_dump($hasil);
         $data = [
             'title' => 'Keanggotaan',

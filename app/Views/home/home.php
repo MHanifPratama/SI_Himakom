@@ -45,7 +45,7 @@
 					<li class="dropdown"><a href="#"><span class="text-primary">Log In</span> <i
 								class="bi bi-chevron-down"></i></a>
 						<ul>
-							<li><a href="loginAdmin">Adminstrator</a></li>
+							<li><a href="loginAdmin">Administrator</a></li>
 							<li><a href="#">Pimpinan Bidang</a></li>
 							<!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
 										class="bi bi-chevron-right"></i></a>

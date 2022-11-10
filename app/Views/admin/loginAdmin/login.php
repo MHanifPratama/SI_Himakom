@@ -62,7 +62,7 @@
 								<label for="email">E-mail</label>
 							</div>
 							<div class="form-floating mb-3">
-								<input required class="form-control text-white" type="text" id="password"
+								<input required class="form-control text-white" type="password" id="password"
 									name="password">
 								<label for="password">Kata Sandi</label>
 							</div>

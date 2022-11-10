@@ -888,7 +888,7 @@ a:hover {
 	border-radius: 1rem;
 	margin-bottom: 3rem;
 	text-align: center;
-	height: 50vh;
+	height: 400px;
 }
 
 .service-box:hover .ico-circle {
@@ -974,7 +974,7 @@ a:hover {
 .work-img {
 	display: block;
 	overflow: hidden;
-	height: 30vh;
+	height: 250px;
 }
 
 .work-img img {

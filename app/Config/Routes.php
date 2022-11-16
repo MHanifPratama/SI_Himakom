@@ -54,6 +54,7 @@ $routes->get('/edit/(:num)', 'admin\adminFunction::edit/$1', ['filter' => 'authA
 $routes->post('/update/(:num)', 'admin\adminFunction::update/$1', ['filter' => 'authAdmin']);
 $routes->get('/viewCetak', 'admin\adminFunction::viewCetak/$1', ['filter' => 'authAdmin']);
 $routes->post('/tampilDataCetak', 'admin\adminFunction::tampilCetak', ['filter' => 'authAdmin']);
+
 //jabatan
 $routes->get('/listJabatan', 'admin\jabatanFunction::list_jabatan', ['filter' => 'authAdmin']);
 $routes->get('/tambahJabatan', 'admin\jabatanFunction::tambah', ['filter' => 'authAdmin']);
@@ -87,7 +88,7 @@ $routes->post('/update_kepanitiaan/(:num)', 'admin\kepanitiaanFunction::update/$
 $routes->get('/test', 'pimpinan\anggotaFunction::list_laporan');
 $routes->get('/listLaporan', 'pimpinan\laporanFunction::list_laporan');
 $routes->post('/cetakSK', 'pimpinan\laporanFunction::cetak_sk');
-
+$routes->post('/tampilDataCetakSK', 'pimpinan\laporanFunction::tampilCetakSK');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

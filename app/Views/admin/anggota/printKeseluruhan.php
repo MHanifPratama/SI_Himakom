@@ -21,12 +21,31 @@
 </head>
 
 <body class="text-dark ff-gantari bg-light">
-	<div class="container-fluid pt-4 px-4">
+	<div class="container-fluid">
 		<div class="row g-4">
-			<div class="col-12">
-				<div class="rounded h-100 p-4">
-					<h5 class="my-3 text-center">Tabel Anggota</h5>
-					<table class="table text-dark ff-gantari">
+			<div class="col">
+				<div class="rounded h-100">
+					<header>
+						<div class="d-flex justify-content-between">
+							<div class="">
+								<img src="/assets/img/unila.png" width="85px">
+							</div>
+							<div class="text-center">
+								<h6><b>HIMPUNAN MAHASISWA JURUSAN ILMU KOMPUTER (HIMAKOM)</b></h6>
+								<h6><b>FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM</b></h6>
+								<h6><b>UNIVERSITAS LAMPUNG</b></h6>
+								<p style="font-size: 13px;"><i>Jl. Prof. Dr. Soemantri Brojonegoro Gedung UKM FMIPA
+										Gedong Meneng, Bandarlampung
+										35145</i></p>
+							</div>
+							<div class="">
+								<img src="/assets/img/himakom.png" width="75px">
+							</div>
+						</div>
+						<hr>
+					</header>
+					<h6 class="my-3 text-uppercase"><b>Rekapitulasi Anggota</b></h6>
+					<table class="table table-bordered border-dark table-responsive text-dark ff-gantari">
 						<thead>
 							<tr>
 								<th scope="col">No</th>
@@ -38,19 +57,19 @@
 						<?php foreach ($hasilPerhitungan as $count => $hasil) : ?>
 						<tbody>
 							<tr>
-								<td><?= ++$counter1 ?></td>
+								<td width="1%"><?= ++$counter1 ?></td>
 								<td><?= $count ?></td>
 								<td><?= $hasil ?></td>
 							</tr>
 						</tbody>
 						<?php endforeach; ?>
 					</table>
-					<hr class="my-5">
-					<table class="table table-responsive text-dark ff-gantari align-middle">
+					<h6 class="my-3 text-uppercase"><b>Tabel Anggota</b></h6>
+					<table class="table table-bordered border-dark table-responsive text-dark ff-gantari align-middle">
 						<thead>
 							<tr>
 								<th scope="col">No</th>
-								<th scope="col">ID</th>
+								<!-- <th scope="col">ID</th> -->
 								<th scope="col">Nama</th>
 								<th scope="col">NPM</th>
 								<th scope="col">Bidang</th>
@@ -64,8 +83,8 @@
 						<?php foreach ($anggota as $Bio) : ?>
 						<tbody>
 							<tr>
-								<td><?= ++$counter2 ?></td>
-								<td><?= $Bio['id_anggota'] ?></td>
+								<td width="1%"><?= ++$counter2 ?></td>
+								<!-- <td><?= $Bio['id_anggota'] ?></td> -->
 								<td><?= $Bio['nama_anggota'] ?></td>
 								<td><?= $Bio['npm'] ?></td>
 								<td><?= $Bio['nama_bidang'] ?></td>
@@ -76,15 +95,14 @@
 							</tr>
 						</tbody>
 						<?php endforeach; ?>
-						<caption>Total</caption>
 					</table>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<footer class="container-fluid pt-4 px-4">
-		<div class="rounded-top p-4">
+	<footer class="container-fluid">
+		<div class="rounded-top">
 			<div class="row">
 				<div class="col-12 col-sm-6 text-center text-sm-start ff-gantari">
 					&copy; 2022 <a href="#">SIHIMA</a>, All Right Reserved.

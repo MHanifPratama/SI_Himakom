@@ -4,7 +4,7 @@
 # General
 --------------------------------------------------------------*/
 * {
-	font-family: 'Gantari';
+	font-family: 'Times New Roman';
 }
 
 :root {
@@ -24,9 +24,6 @@
 	background-color: var(--tertiary);
 }
 
-.ff-gantari {
-	font-family: 'Gantari' !important;
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -35,7 +32,6 @@ footer {
 	text-align: center;
 	color: var(--dark);
 	padding: 25px 0;
-	background: var(--primary);
 }
 
 footer .copyright {

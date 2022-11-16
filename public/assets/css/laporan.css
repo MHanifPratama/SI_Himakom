@@ -24,6 +24,17 @@
 	background-color: var(--tertiary);
 }
 
+#printButton {
+	height: 3rem;
+	width: 7rem;
+}
+
+@media print {
+	#printButton {
+		display: none;
+	}
+}
+
 
 /*--------------------------------------------------------------
 # Footer

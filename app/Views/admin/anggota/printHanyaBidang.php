@@ -20,17 +20,43 @@
 	<link href="/assets/css/laporan.css" rel="stylesheet">
 </head>
 
-<body class="text-dark ff-gantari bg-light">
-	<div class="container-fluid pt-4 px-4">
+<body class="text-dark ff-gantari">
+	<div class="container-fluid">
 		<div class="row g-4">
-			<div class="col-12">
-				<div class="rounded h-100 p-4">
-					<h5 class="my-3 text-center">Tabel Anggota</h5>
-					<table class="table text-dark ff-gantari">
+			<div class="col">
+				<div class="rounded h-100">
+					<header>
+						<div class="d-flex align-items-end flex-column">
+							<div class="">
+								<button class="btn btn-dark my-3" id="printButton" onClick="window.print();">
+									<i class="bi bi-printer"></i> Cetak</button>
+							</div>
+						</div>
+						<div class="d-flex justify-content-between">
+							<div class="">
+								<img src="/assets/img/unila.png" width="80px">
+							</div>
+							<div class="text-center">
+								<h6><b>HIMPUNAN MAHASISWA JURUSAN ILMU KOMPUTER (HIMAKOM)</b></h6>
+								<h6><b>FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM</b></h6>
+								<h6><b>UNIVERSITAS LAMPUNG</b></h6>
+								<p style="font-size: 13px;"><i>Jl. Prof. Dr. Soemantri Brojonegoro Gedung UKM FMIPA
+										Gedong Meneng, Bandarlampung
+										35145</i></p>
+							</div>
+							<div class="">
+								<img src="/assets/img/himakom.png" width="70px">
+							</div>
+						</div>
+						<hr>
+					</header>
+					<h6 class="mt-5 text-uppercase"><b>Tabel Anggota</b></h6>
+					<table
+						class="table table-borderless border-dark table-responsive text-dark ff-gantari align-middle">
 						<thead>
 							<tr>
 								<th scope="col">No</th>
-								<th scope="col">ID</th>
+								<!-- <th scope="col">ID</th> -->
 								<th scope="col">Nama</th>
 								<th scope="col">NPM</th>
 								<th scope="col">Bidang</th>
@@ -45,7 +71,7 @@
 						<tbody>
 							<tr>
 								<td><?= ++$counter ?></td>
-								<td><?= $Bio['id_anggota'] ?></td>
+								<!-- <td><?= $Bio['id_anggota'] ?></td> -->
 								<td><?= $Bio['nama_anggota'] ?></td>
 								<td><?= $Bio['npm'] ?></td>
 								<td><?= $Bio['nama_bidang'] ?></td>
@@ -56,17 +82,16 @@
 							</tr>
 						</tbody>
 						<?php endforeach; ?>
-						<caption>Total</caption>
 					</table>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<footer class="container-fluid pt-4 px-4">
-		<div class="rounded-top p-4">
+	<footer class="container-fluid">
+		<div class="rounded-top">
 			<div class="row">
-				<div class="col-12 col-sm-6 text-center text-sm-start ff-gantari">
+				<div class="col-12 col-sm-6 text-sm-start ff-gantari">
 					&copy; 2022 <a href="#">SIHIMA</a>, All Right Reserved.
 				</div>
 			</div>

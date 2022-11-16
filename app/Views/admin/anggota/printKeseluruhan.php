@@ -20,15 +20,21 @@
 	<link href="/assets/css/laporan.css" rel="stylesheet">
 </head>
 
-<body class="text-dark ff-gantari bg-light">
+<body class="text-dark ff-gantari">
 	<div class="container-fluid">
 		<div class="row g-4">
 			<div class="col">
 				<div class="rounded h-100">
 					<header>
+						<div class="d-flex align-items-end flex-column">
+							<div class="">
+								<button class="btn btn-dark my-3" id="printButton" onClick="window.print();">
+									<i class="bi bi-printer"></i> Cetak</button>
+							</div>
+						</div>
 						<div class="d-flex justify-content-between">
 							<div class="">
-								<img src="/assets/img/unila.png" width="85px">
+								<img src="/assets/img/unila.png" width="80px">
 							</div>
 							<div class="text-center">
 								<h6><b>HIMPUNAN MAHASISWA JURUSAN ILMU KOMPUTER (HIMAKOM)</b></h6>
@@ -39,13 +45,13 @@
 										35145</i></p>
 							</div>
 							<div class="">
-								<img src="/assets/img/himakom.png" width="75px">
+								<img src="/assets/img/himakom.png" width="70px">
 							</div>
 						</div>
 						<hr>
 					</header>
-					<h6 class="my-3 text-uppercase"><b>Rekapitulasi Anggota</b></h6>
-					<table class="table table-bordered border-dark table-responsive text-dark ff-gantari">
+					<h6 class="mt-5 text-uppercase"><b>Rekapitulasi Anggota</b></h6>
+					<table class="table table-borderless border-dark table-responsive text-dark ff-gantari">
 						<thead>
 							<tr>
 								<th scope="col">No</th>
@@ -64,8 +70,9 @@
 						</tbody>
 						<?php endforeach; ?>
 					</table>
-					<h6 class="my-3 text-uppercase"><b>Tabel Anggota</b></h6>
-					<table class="table table-bordered border-dark table-responsive text-dark ff-gantari align-middle">
+					<h6 class="mt-5 text-uppercase"><b>Tabel Anggota</b></h6>
+					<table
+						class="table table-borderless border-dark table-responsive text-dark ff-gantari align-middle">
 						<thead>
 							<tr>
 								<th scope="col">No</th>
@@ -74,8 +81,8 @@
 								<th scope="col">NPM</th>
 								<th scope="col">Bidang</th>
 								<th scope="col">Prodi</th>
-								<th scope="col">Status Jabatan</th>
-								<th scope="col">Nama Kepanitiaan</th>
+								<th scope="col">Jabatan</th>
+								<th scope="col">Kepanitiaan</th>
 								<th scope="col">Periode</th>
 							</tr>
 						</thead>
@@ -104,7 +111,7 @@
 	<footer class="container-fluid">
 		<div class="rounded-top">
 			<div class="row">
-				<div class="col-12 col-sm-6 text-center text-sm-start ff-gantari">
+				<div class="col-12 col-sm-6 text-sm-start ff-gantari">
 					&copy; 2022 <a href="#">SIHIMA</a>, All Right Reserved.
 				</div>
 			</div>

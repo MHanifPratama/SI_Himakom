@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+* {
+	font-family: 'Gantari';
+}
+
+:root {
+	--primary: #FFD369;
+	--secondary: #393E46;
+	--tertiary: #D1D1D1;
+	--light: #EEEEEE;
+	--dark: #222831;
+	--gantari: 'Gantari';
+}
+
+.text-dark {
+	color: var(--dark);
+}
+
+.bg-light {
+	background-color: var(--tertiary);
+}
+
+.ff-gantari {
+	font-family: 'Gantari' !important;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+	text-align: center;
+	color: var(--dark);
+	padding: 25px 0;
+	background: var(--primary);
+}
+
+footer .copyright {
+	margin-bottom: 0.3rem;
+}
+
+footer .credits {
+	margin-bottom: 0;
+}
+
+footer .credits a {
+	color: #fff;
+}

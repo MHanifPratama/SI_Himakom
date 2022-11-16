@@ -31,4 +31,33 @@ class laporanFunction extends BaseController{
 		];
 		return view('pimpinan\laporan\cetakSK', $data);
 	}
+	public function tampilCetakSK(){
+		// echo $this -> request -> getPost('ketua_pelaksana');
+		$division = $this -> request -> getPost('divisi');
+		$koor = $this -> request -> getPost('koordinator');
+		$sekoor = $this -> request -> getPost('sekretaris_koordinator');
+		$anggota = $this -> request -> getPost('anggota');
+		// echo $koor[0];
+		// echo $koor[1];
+		// echo $koor[2];
+		// echo $anggota[2][0];
+		// echo print_r($koor);
+		// echo print_r($sekoor);
+		echo print_r($anggota);
+		$tmp = 0;
+		foreach ($division as $div){
+			echo "<br>";
+			echo $div;
+			echo "<br>";
+			echo $koor[$tmp];
+			echo "<br>";
+			echo $sekoor[$tmp];
+			echo "<br>";
+			foreach ($anggota[$tmp] as $ang){
+				echo $ang;
+				echo "<br>";
+			}
+			$tmp++;
+		}
+	}
 }

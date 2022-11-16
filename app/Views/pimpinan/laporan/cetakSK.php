@@ -1,4 +1,4 @@
-<?= $this->extend('templates/header') ?>
+<?= $this->extend('templates/pimpinan/header') ?>
 <!-- Content Start -->
 <div class="content">
     <?= $this->section('content') ?>

@@ -39,27 +39,11 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto " href="/viewKeanggotaan">Cari Keanggotaan</a></li>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#services">Bidang, Biro, dan Badan</a></li>
-                    <li><a class="nav-link scrollto " href="#work">Program Kerja</a></li>
-                    <li class="dropdown"><a href="#"><span class="text-primary">Log In</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="loginAdmin">Administrator</a></li>
-                            <li><a href="#">Pimpinan Bidang</a></li>
-                            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-										class="bi bi-chevron-right"></i></a>
-								<ul>
-									<li><a href="#">Deep Drop Down 1</a></li>
-									<li><a href="#">Deep Drop Down 2</a></li>
-									<li><a href="#">Deep Drop Down 3</a></li>
-									<li><a href="#">Deep Drop Down 4</a></li>
-									<li><a href="#">Deep Drop Down 5</a></li>
-								</ul>
-							</li> -->
-                        </ul>
-                    </li>
+                    <li><a class="nav-link scrollto " href="#work">Program Kerja</a></li> -->
+                    
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

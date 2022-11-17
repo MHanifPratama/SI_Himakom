@@ -62,8 +62,10 @@ class Home extends BaseController
             ->join('jabatan','jabatan.id_jabatan = biodata.id_jabatan')->where('biodata.id_bidang', $id)->findAll(),
             'totalAnggota'=> $modelBiodata->where('id_bidang',$id)->countAllResults(),
             'totalProgja'=> $modelProgja->where('id_bidang',$id)->countAllResults(),
-            // 'kepala_bidang' = $modelBiodata->where('id_bidang',$id)->where()
+            'kepala_bidang' => $modelBiodata->join('jabatan','jabatan.id_jabatan = biodata.id_jabatan')->where('id_bidang',$id)->where('jabatan.nama_jabatan','Kepala Bidang')->first(),
+            'ketua_umum' => $modelBiodata->join('jabatan','jabatan.id_jabatan = biodata.id_jabatan')->where('id_bidang',$id)->where('jabatan.nama_jabatan','Ketua Umum')->first(),
         ];
+        // echo print_r ($data['kepala_bidang']);
         // echo print_r($data['bidang']);
         // echo print_r($data['anggota']);
         return view('home\detailBidang',$data);

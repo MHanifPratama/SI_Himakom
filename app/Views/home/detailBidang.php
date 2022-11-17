@@ -107,12 +107,21 @@
                 <li><strong>Total Program Kerja</strong>: <?=$totalProgja?></li>
               </ul>
             </div>
+            <?php if ($bidang['id_bidang']!='1'):?>
             <div class="portfolio-description">
-              <h2>Kepala Bidang </h2>
+              <h2>Kepala Bidang : <?=$kepala_bidang['nama_anggota']?></h2>
               <!-- <p>
                 Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
               </p> -->
             </div>
+            <?php elseif ($bidang['id_bidang']=='1'):   ?>
+                <div class="portfolio-description">
+              <h2>Kepala Bidang : <?=$ketua_umum['nama_anggota']?></h2>
+              <!-- <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p> -->
+            </div>
+            <?php endif;?>
           </div>
 
         </div>

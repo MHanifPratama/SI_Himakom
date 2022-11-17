@@ -2,156 +2,137 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>SIHIMA</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+	<title>SIHIMA</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="<?=base_url('assetsHome/DevFolio/assets/img/favicon.png')?>" rel="icon">
-    <link href="<?=base_url('assetsHome/DevFolio/assets/img/apple-touch-icon.png')?>" rel="apple-touch-icon">
+	<!-- Favicons -->
+	<link href="<?= base_url('assetsHome/DevFolio/assets/img/favicon.png') ?>" rel="icon">
+	<link href="<?= base_url('assetsHome/DevFolio/assets/img/apple-touch-icon.png') ?>" rel="apple-touch-icon">
 
-    <!-- Vendor CSS Files -->
-    <link href="<?=base_url('assetsHome/DevFolio/assets/vendor/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?=base_url('assetsHome/DevFolio/assets/vendor/bootstrap-icons/bootstrap-icons.css')?>" rel="stylesheet">
-    <link href="<?=base_url('assetsHome/DevFolio/assets/vendor/glightbox/css/glightbox.min.css')?>" rel="stylesheet">
-    <link href="<?base_url('assetsHome/DevFolio/assets/vendor/swiper/swiper-bundle.min.css')?>" rel="stylesheet">
+	<!-- Vendor CSS Files -->
+	<link href="<?= base_url('assetsHome/DevFolio/assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?= base_url('assetsHome/DevFolio/assets/vendor/bootstrap-icons/bootstrap-icons.css') ?>"
+		rel="stylesheet">
+	<link href="<?= base_url('assetsHome/DevFolio/assets/vendor/glightbox/css/glightbox.min.css') ?>" rel="stylesheet">
+	<link href="<? base_url('assetsHome/DevFolio/assets/vendor/swiper/swiper-bundle.min.css') ?>" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="<?=base_url('assetsHome/DevFolio/assets/css/style.css')?>" rel="stylesheet">
+	<!-- Template Main CSS File -->
+	<link href="<?= base_url('assetsHome/DevFolio/assets/css/style.css') ?>" rel="stylesheet">
 
-    <!-- =======================================================
+	<!-- =======================================================
 </head>
 
 <body>
 
   
 	<!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center justify-content-between">
 
-            <h1 class="logo"><a href="/">SIHIMA</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo"><img src="<?=base_url('assetsHome/DevFolio/assets/img/logo.png')?>" alt="" class="img-fluid"></a>-->
+			<h1 class="logo"><a href="/">SIHIMA</a></h1>
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a class="nav-link scrollto " href="/viewKeanggotaan">Cari Keanggotaan</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav><!-- .navbar -->
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto " href="/viewKeanggotaan">Cari Keanggotaan</a></li>
-                    <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Bidang, Biro, dan Badan</a></li>
-                    <li><a class="nav-link scrollto " href="#work">Program Kerja</a></li> -->
-                    
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+		</div>
+	</header><!-- End Header -->
 
-        </div>
-    </header><!-- End Header -->
+	<div class="hero hero-single route bg-image"
+		style="background-image: url(<?= base_url('assets/img/overlay-bg.jpg') ?>)">
+		<div class="overlay-mf"></div>
+		<div class="hero-content display-table">
+			<div class="table-cell">
+				<div class="container">
+					<h2 class="hero-title mb-4"><?= $bidang['nama_bidang'] ?></h2>
+					<ol class="breadcrumb d-flex justify-content-center">
+						<li class="breadcrumb-item">
+							<a href="#">Home</a>
+						</li>
+						<li class="breadcrumb-item active"><?= $bidang['nama_bidang'] ?></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <div class="hero hero-single route bg-image" style="background-image: url(<?=base_url('assets/img/overlay-bg.jpg')?>)">
-    <div class="overlay-mf"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h2 class="hero-title mb-4"><?=$bidang['nama_bidang'] ?></h2>
-          <ol class="breadcrumb d-flex justify-content-center">
-            <li class="breadcrumb-item">
-              <a href="#">Home</a>
-            </li>
-            <li class="breadcrumb-item active"><?=$bidang['nama_bidang'] ?></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
+	<main id="main">
+		<section id="portfolio-details" class="portfolio-details">
+			<div class="container">
 
-  <main id="main">
+				<div class="row g-4 my-4">
 
-    <!-- ======= <?=$bidang['nama_bidang'] ?> Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+					<div class="col-4">
+						<img src="/assets/img/logoBidang/<?= $bidang['logo_bidang'] ?>" alt="Avatar">
+					</div>
 
-        <div class="row gy-4">
+					<div class="col-1">
 
-          <div class="col-lg-8">
-                  <!-- <img src="https://www.gdwad.com/wp-content/uploads/2022/04/logo.png" alt="AA"> -->
-                  <img src="/assets/img/logoBidang/<?= $bidang['logo_bidang'] ?>" alt="Avatar">
-          </div>
+					</div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Informasi Bidang</h3>
-              <ul>
-                <li><strong>Visi</strong>: <?=$bidang['visi']?></li>
-                <li><strong>Misi</strong>: <?=$bidang['misi']?></li>
-                <li><strong>Total Anggota</strong>: <?=$totalAnggota?></li>
-                <li><strong>Total Program Kerja</strong>: <?=$totalProgja?></li>
-              </ul>
-            </div>
-            <?php if ($bidang['id_bidang']!='1'):?>
-            <div class="portfolio-description">
-              <h2>Kepala Bidang : <?=$kepala_bidang['nama_anggota']?></h2>
-              <!-- <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p> -->
-            </div>
-            <?php elseif ($bidang['id_bidang']=='1'):   ?>
-                <div class="portfolio-description">
-              <h2>Kepala Bidang : <?=$ketua_umum['nama_anggota']?></h2>
-              <!-- <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p> -->
-            </div>
-            <?php endif;?>
-          </div>
+					<div class="col-5">
+						<div class="portfolio-info">
+							<h4><b>Informasi Bidang</b></h4>
+							<?php if ($bidang['id_bidang'] != '1') : ?>
+							<div class="portfolio-description">
+								<h5><b>Kepala Bidang: </b><?= $kepala_bidang['nama_anggota'] ?></h5>
+							</div>
+							<?php elseif ($bidang['id_bidang'] == '1') :   ?>
+							<div class="portfolio-description">
+								<h5><b>Ketua Umum: </b><?= $ketua_umum['nama_anggota'] ?></h5>
 
-        </div>
+							</div>
+							<?php endif; ?>
+							<ul>
+								<li class="text-justify"><strong>Visi</strong><br><?= $bidang['visi'] ?></li>
+								<li class="text-justify"><strong>Misi</strong><br><?= $bidang['misi'] ?></li>
+								<li class="text-justify"><strong>Total Anggota</strong>: <?= $totalAnggota ?></li>
+								<li class="text-justify"><strong>Total Program Kerja</strong>: <?= $totalProgja ?></li>
+							</ul>
+						</div>
+					</div>
 
-      </div>
-    </section><!-- End <?=$bidang['nama_bidang'] ?> Section -->
+				</div>
 
-  </main><!-- End #main -->
+			</div>
+		</section><!-- End <?= $bidang['nama_bidang'] ?> Section -->
 
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+	</main><!-- End #main -->
 
- <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+	<!-- ======= Footer =======	 -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="copyright-box">
+						<p class="copyright">&copy; Copyright <strong>SIHIMA</strong>. All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer><!-- End  Footer -->
 
-    <!-- Vendor JS Files -->
-    <script src="<?=base_url('assetsHome/DevFolio/assets/vendor/purecounter/purecounter_vanilla.js')?>"></script>
-    <script src="<?=base_url('assetsHome/DevFolio/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
-    <script src="<?=base_url('assetsHome/DevFolio/assets/vendor/glightbox/js/glightbox.min.js')?>"></script>
-    <script src="<?=base_url('assetsHome/DevFolio/assets/vendor/swiper/swiper-bundle.min.js')?>"></script>
-    <script src="<?=base_url('assetsHome/DevFolio/assets/vendor/typed.js/typed.min.js')?>"></script>
-    <script src="<?=base_url('assetsHome/DevFolio/assets/vendor/php-email-form/validate.js')?>"></script>
+	<div id="preloader"></div>
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Template Main JS File -->
-    <script src="<?=base_url('assetsHome/DevFolio/assets/js/main.js')?>"></script>
+	<!-- Vendor JS Files -->
+	<script src="<?= base_url('assetsHome/DevFolio/assets/vendor/purecounter/purecounter_vanilla.js') ?>"></script>
+	<script src="<?= base_url('assetsHome/DevFolio/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+	<script src="<?= base_url('assetsHome/DevFolio/assets/vendor/glightbox/js/glightbox.min.js') ?>"></script>
+	<script src="<?= base_url('assetsHome/DevFolio/assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
+	<script src="<?= base_url('assetsHome/DevFolio/assets/vendor/typed.js/typed.min.js') ?>"></script>
+	<script src="<?= base_url('assetsHome/DevFolio/assets/vendor/php-email-form/validate.js') ?>"></script>
 
-</body>
+	<!-- Template Main JS File -->
+	<script src="<?= base_url('assetsHome/DevFolio/assets/js/main.js') ?>"></script>
+
+	</body>
 
 </html>

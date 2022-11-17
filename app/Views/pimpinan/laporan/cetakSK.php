@@ -67,6 +67,7 @@
         '</tr>' +
         '<tr class="item">' +
         '<td><input type="text" class="form-control text-light" placeholder="Anggota" values="Anggota" readonly required></td>' +
+        // '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[][]" id="lele">'
         '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[][]" id="lele">'
                                 +'<option value="">Tidak Ada</option>'
                                 +'<?php foreach ($Biodata as $biodata) : ?>'
@@ -74,8 +75,7 @@
                                 +'<?php endforeach; ?>'
                             +'</select> </div> </td> ' +
         '<td><a href="javascript:void(0);" class="add_button btn btn-sm btn-primary" title="Add field"><i class="fa fa-plus"></i></a></td>' +
-        '</tr>' +
-        '</tr>' +
+
         '</tbody>' +
         '</table>' +
         '</div>';
@@ -83,7 +83,7 @@
     var html_fields = '' +
         '<tr class="item">' +
         '<td> <div class="form-group mb-0"> <input type="text" class="form-control text-light" values="Anggota" readonly required placeholder="Anggota"> </div> </td> ' +
-        '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[][]">'
+        '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[][]" id="lele">'
                                 +'<option value="">Tidak Ada</option>'
                                 +'<?php foreach ($Biodata as $biodata) : ?>'
                                 +'<option value="<?= $biodata['nama_anggota'] ?>"><?= $biodata['nama_anggota'] ?></option>'
@@ -102,7 +102,7 @@
             z++;
             // $("lele").append(z);
             // $("#test3").val(name);
-            $(this).append("<input type='text' name='photo_" + (count++) +"'/><br />");
+            // name="anggota[][]"
             $(this).closest('.group_wrapper').append(html_group);
 
         }
@@ -112,6 +112,7 @@
     $('body').on('click', '.add_button', function() {
         if (x < max_field) {
             x++;
+            z++;
             $(this).closest('.field_wrapper').append(html_fields);
         }
     });
@@ -224,13 +225,13 @@
                                         <tr class="item">
                                             <td><input type="text" class="form-control text-light" placeholder="Anggota"
                                                     values="Anggota" readonly required></td>
-                                            <td><select class="form-select text-light" type="text" name="anggota[][]"
-                                id="anggota">
-                                <option value="">Tidak Ada</option>
-                                <?php foreach ($Biodata as $biodata) : ?>
-                                <option value="<?= $biodata['nama_anggota'] ?>"><?= $biodata['nama_anggota']?></option>
-                                <?php endforeach; ?>
-                            </select>
+                                            <td><select class="form-select text-light" type="text" name="anggota[][]" id="lele"
+                                                    id="anggota">
+                                                    <option value="">Tidak Ada</option>
+                                                    <?php foreach ($Biodata as $biodata) : ?>
+                                                    <option value="<?= $biodata['nama_anggota'] ?>"><?= $biodata['nama_anggota']?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
                                             </td>
                                             <td><a href="javascript:void(0);" class="add_button btn btn-sm btn-primary"
                                                     title="Add field"><i class="fa fa-plus"></i></a></td>

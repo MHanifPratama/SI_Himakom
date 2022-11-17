@@ -89,6 +89,8 @@ $routes->get('/test', 'pimpinan\anggotaFunction::list_laporan');
 $routes->get('/listLaporan', 'pimpinan\laporanFunction::list_laporan');
 $routes->post('/cetakSK', 'pimpinan\laporanFunction::cetak_sk');
 $routes->post('/tampilDataCetakSK', 'pimpinan\laporanFunction::tampilCetakSK');
+
+$routes->get('/detail_bidang/(:num)', 'Home::detail_bidang/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

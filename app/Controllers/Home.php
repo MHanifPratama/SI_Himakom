@@ -45,4 +45,28 @@ class Home extends BaseController
         ];
         return view('home\hasilPencarian',$data);
     }
+    public function detail_bidang($id){
+        $modelBiodata = new Biodata();
+        $modelBidang = new Bidang();
+        $model = new Bidang();
+        $modelProgja = new Kepanitiaan();
+        $dataProgja = $modelProgja->join('bidang','bidang.id_bidang=kepanitiaan.id_bidang')->get()->getResultArray();
+        $model = new Bidang();
+        $modelProgja = new Kepanitiaan();
+        // $data['bidang'] = $model->findAll();
+        $data = [
+            'title' => 'Detail Bidang',
+            'bidang' => $modelBidang->where('id_bidang',$id)->first(),
+            'anggota' => $modelBiodata->join('bidang','bidang.id_bidang = biodata.id_bidang')
+            ->join('prodi','prodi.id_prodi =biodata.id_prodi')
+            ->join('jabatan','jabatan.id_jabatan = biodata.id_jabatan')->where('biodata.id_bidang', $id)->findAll(),
+            'totalAnggota'=> $modelBiodata->where('id_bidang',$id)->countAllResults(),
+            'totalProgja'=> $modelProgja->where('id_bidang',$id)->countAllResults(),
+            // 'kepala_bidang' = $modelBiodata->where('id_bidang',$id)->where()
+        ];
+        // echo print_r($data['bidang']);
+        // echo print_r($data['anggota']);
+        return view('home\detailBidang',$data);
 }
+}
+

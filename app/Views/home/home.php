@@ -179,17 +179,25 @@
                         <div class="col-md-4">
                             <?php if ($bidang['id_bidang'] != '1000') : ?>
                             <div class="service-box">
+                                
                                 <div class="service-ico">
                                     <span class="ico-circle"><img
                                             src="/assets/img/logoBidang/<?= $bidang['logo_bidang'] ?>" alt="Avatar"
                                             style="width:60px;height:60px;"></i></span>
                                 </div>
+                                
                                 <div class="service-content">
                                     <h2 class="s-title mt-4 mb-3"><?= $bidang['nama_bidang'] ?></h2>
                                     <p class="s-description text-center">
                                         <?= $bidang['visi'] ?>
                                     </p>
                                 </div>
+                                <div class="service-content">
+                                        <div class="w-like">
+                                            <a href="/detail_bidang/<?= $bidang['id_bidang'] ?>"> <span
+                                                    class="bi bi-plus-circle"></span></a>
+                                        </div>
+                                    </div>
                             </div>
 							
 							<?php elseif ($bidang['id_bidang']==='1000'):   ?>
@@ -287,12 +295,7 @@
                                             <span class="w-ctegory"><?= $progja["nama_bidang"] ?></span>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="w-like">
-                                            <a href="portfolio-details.html"> <span
-                                                    class="bi bi-plus-circle"></span></a>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

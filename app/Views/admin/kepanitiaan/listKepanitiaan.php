@@ -24,28 +24,32 @@
 								<th scope="col">Aksi</th>
 							</tr>
 						</thead>
-						
+
 						<?php foreach ($Kepanitiaan as $kepan) : ?>
-							<tbody>
-								<tr>
-									<td><?= $kepan['id_status_kepanitiaan'] ?></td>
-									<td><?= $kepan['nama_kepanitiaan'] ?></td>
-                                    <td><?= $kepan['nama_bidang'] ?></td>
-									<td>
-										<div class="row">
-											<div class="col">
-												<form action="/hapus_kepanitiaan/<?= $kepan['id_status_kepanitiaan'] ?>" method="post">
-													<input type="hidden" name="_method" value="DELETE" />
-													<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i class="fa fa-trash"></i></button>
-												</form>
-											</div>
-											<div class="col">
-												<a class="btn btn-dark btn-sm ff-gantari" href="/edit_kepanitiaan/<?= $kepan['id_status_kepanitiaan'] ?>"><i class="fa fa-pen"></i></a>
-											</div>
+						<tbody>
+							<tr>
+								<td><?= $kepan['id_status_kepanitiaan'] ?></td>
+								<td><?= $kepan['nama_kepanitiaan'] ?></td>
+								<td><?= $kepan['nama_bidang'] ?></td>
+								<td>
+									<div class="row row-cols-auto">
+										<div class="col">
+											<form action="/hapus_kepanitiaan/<?= $kepan['id_status_kepanitiaan'] ?>"
+												method="post">
+												<input type="hidden" name="_method" value="DELETE" />
+												<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i
+														class="fa fa-trash"></i></button>
+											</form>
 										</div>
-									</td>
-								</tr>
-							</tbody>
+										<div class="col">
+											<a class="btn btn-dark btn-sm ff-gantari"
+												href="/edit_kepanitiaan/<?= $kepan['id_status_kepanitiaan'] ?>"><i
+													class="fa fa-pen"></i></a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
 						<?php endforeach; ?>
 						<caption>Total</caption>
 					</table>
@@ -72,7 +76,8 @@
 	</div>
 </footer>
 <!-- Back to Top -->
-<a href="\tambahKepanitiaan" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="bi bi-plus text-dark"></i></a>
+<a href="\tambahKepanitiaan" class="btn btn-lg btn-light btn-lg-square back-to-top"><i
+		class="bi bi-plus text-dark"></i></a>
 </div>
 
 

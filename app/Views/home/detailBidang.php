@@ -66,7 +66,7 @@
 		<section id="portfolio-details" class="portfolio-details">
 			<div class="container">
 
-				<div class="row g-4 my-4">
+				<div class="row g-4 mb-4">
 
 					<div class="col-4">
 						<img src="/assets/img/logoBidang/<?= $bidang['logo_bidang'] ?>" alt="Avatar">

@@ -51,7 +51,7 @@
 						<hr>
 					</header>
 					<h6 class="mt-5 text-uppercase"><b>Rekapitulasi Anggota</b></h6>
-					<table class="table table-borderless border-dark table-responsive text-dark ff-gantari">
+					<table class="table table-borderless table-responsive text-dark ff-gantari">
 						<thead>
 							<tr>
 								<th scope="col">No</th>
@@ -71,8 +71,7 @@
 						<?php endforeach; ?>
 					</table>
 					<h6 class="mt-5 text-uppercase"><b>Tabel Anggota</b></h6>
-					<table
-						class="table table-borderless border-dark table-responsive text-dark ff-gantari align-middle">
+					<table class="table table-borderless table-responsive text-dark ff-gantari align-middle">
 						<thead>
 							<tr>
 								<th scope="col">No</th>

@@ -33,31 +33,58 @@ class laporanFunction extends BaseController{
 	}
 	public function tampilCetakSK(){
 		// echo $this -> request -> getPost('ketua_pelaksana');
+		$kegiatan = $this-> request -> getPost('nama_kegiatan');
 		$division = $this -> request -> getPost('divisi');
 		$koor = $this -> request -> getPost('koordinator');
 		$sekoor = $this -> request -> getPost('sekretaris_koordinator');
 		$anggota = $this -> request -> getPost('anggota');
+		$ketua_pelaksana = $this -> request -> getPost('ketua_pelaksana');
+		$sekretaris_pelaksana = $this -> request -> getPost('sekretaris_pelaksana');
+		$bendahara_pelaksana = $this -> request -> getPost('bendahara_pelaksana');
+
+		$data=[
+			'kegiatan' => $kegiatan,
+			'division' => $division,
+			'koor' => $koor,
+			'sekoor' => $sekoor,
+			'anggota' => $anggota,
+			'ketua_pelaksana' => $ketua_pelaksana,
+			'sekretaris_pelaksana' => $sekretaris_pelaksana,
+			'bendahara_pelaksana' => $bendahara_pelaksana
+		];
+		return view('pimpinan\laporan\sk', $data);
+
 		// echo $koor[0];
 		// echo $koor[1];
 		// echo $koor[2];
 		// echo $anggota[2][0];
 		// echo print_r($koor);
 		// echo print_r($sekoor);
-		echo print_r($anggota);
-		$tmp = 0;
-		foreach ($division as $div){
-			echo "<br>";
-			echo $div;
-			echo "<br>";
-			echo $koor[$tmp];
-			echo "<br>";
-			echo $sekoor[$tmp];
-			echo "<br>";
-			foreach ($anggota[$tmp] as $ang){
-				echo $ang;
-				echo "<br>";
-			}
-			$tmp++;
-		}
+		// echo $anggota[0];
+		// echo count($anggota);
+		// echo print_r($anggota);
+		// $tmp = 0;
+		// $x = 0;
+		// foreach ($division as $div){
+		// 	echo "<br>";
+		// 	echo $div;
+		// 	echo "<br>";
+		// 	echo $koor[$tmp];
+		// 	echo "<br>";
+		// 	echo $sekoor[$tmp];
+		// 	echo "<br>";
+		// 	for ($x ; $x < count($anggota); $x++){
+		// 		if ($anggota[$x] == 'anggota'){
+		// 			// continue;
+		// 			$x++;
+		// 			break;
+		// 		}
+		// 		else{
+		// 			echo $anggota[$x];
+		// 			echo "<br>";
+		// 		}
+		// 	}
+		// 	$tmp++;
+		// }
 	}
 }

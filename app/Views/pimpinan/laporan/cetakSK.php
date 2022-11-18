@@ -48,7 +48,7 @@
         '</tr>' +
 
         '<tr class="item">' +
-        '<td><input type="text" class="form-control text-light" placeholder="Koordinator" values="Koordinator" readonly required ></td>' +
+        '<td><input type="text" class="form-control text-light" placeholder="Koordinator" value="Koordinator" readonly required ></td>' +
         '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="koordinator[]">'
                                 +'<option value="">Tidak Ada</option>'
                                 +'<?php foreach ($Biodata as $biodata) : ?>'
@@ -57,7 +57,7 @@
                             +'</select> </div> </td> ' +
         '</tr>' +
         '<tr class="item">' +
-        '<td><input type="text" class="form-control text-light" placeholder="Sekretaris Koordinator" values="Sekretaris Koordinator" readonly required></td>' +
+        '<td><input type="text" class="form-control text-light" placeholder="Sekretaris Koordinator" value="Sekretaris Koordinator" readonly required></td>' +
         '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="sekretaris_koordinator[]">'
                                 +'<option value="">Tidak Ada</option>'
                                 +'<?php foreach ($Biodata as $biodata) : ?>'
@@ -65,25 +65,30 @@
                                 +'<?php endforeach; ?>'
                             +'</select> </div> </td> ' +
         '</tr>' +
+        '<tr class="item">'+
+                                            '<td><input type="text" class="form-control text-light" placeholder="Anggota" value="Anggota" readonly required></td>'+
+                                            '<td><input type="text" class="form-control text-light" name="anggota[]" placeholder="Anggota" value="anggota" readonly required>'+
+                                            '</td>'+
+                                        '</tr>'+
         '<tr class="item">' +
-        '<td><input type="text" class="form-control text-light" placeholder="Anggota" values="Anggota" readonly required></td>' +
-        // '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[][]" id="lele">'
-        '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[][]" id="lele">'
+        '<td><input type="text" class="form-control text-light" placeholder="Anggota" value="Anggota" readonly required></td>' +
+        // '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[]" id="lele">'
+        '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[]" id="lele">'
                                 +'<option value="">Tidak Ada</option>'
                                 +'<?php foreach ($Biodata as $biodata) : ?>'
                                 +'<option value="<?= $biodata['nama_anggota'] ?>"><?= $biodata['nama_anggota'] ?></option>'
                                 +'<?php endforeach; ?>'
                             +'</select> </div> </td> ' +
         '<td><a href="javascript:void(0);" class="add_button btn btn-sm btn-primary" title="Add field"><i class="fa fa-plus"></i></a></td>' +
-
+        
         '</tbody>' +
         '</table>' +
         '</div>';
 
     var html_fields = '' +
         '<tr class="item">' +
-        '<td> <div class="form-group mb-0"> <input type="text" class="form-control text-light" values="Anggota" readonly required placeholder="Anggota"> </div> </td> ' +
-        '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[][]" id="lele">'
+        '<td> <div class="form-group mb-0"> <input type="text" class="form-control text-light" value="Anggota" readonly required placeholder="Anggota"> </div> </td> ' +
+        '<td> <div class="form-group mb-0"> <select class="form-select text-light" type="text" name="anggota[]" id="lele">'
                                 +'<option value="">Tidak Ada</option>'
                                 +'<?php foreach ($Biodata as $biodata) : ?>'
                                 +'<option value="<?= $biodata['nama_anggota'] ?>"><?= $biodata['nama_anggota'] ?></option>'
@@ -102,7 +107,7 @@
             z++;
             // $("lele").append(z);
             // $("#test3").val(name);
-            // name="anggota[][]"
+            // name="anggota[]"
             $(this).closest('.group_wrapper').append(html_group);
 
         }
@@ -143,7 +148,7 @@
                         <div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
                             <select class="form-select text-light" type="text" name="nama_kegiatan" id="nama_kegiatan">
                                 <?php foreach ($Kepanitiaan as $kepanitiaan) : ?>
-                                <option value="<?= $kepanitiaan['id_status_kepanitiaan'] ?>">
+                                <option value="<?= $kepanitiaan['nama_kepanitiaan'] ?>">
                                     <?= $kepanitiaan['nama_kepanitiaan'] ?></option>
                                 <?php endforeach; ?>
                             </select>
@@ -199,7 +204,7 @@
                                         </tr>
                                         <tr class="item">
                                             <td><input type="text" class="form-control text-light"
-                                                    placeholder="Koordinator" values="Koordinator" readonly required>
+                                                    placeholder="Koordinator" value="Koordinator" readonly required>
                                             </td>
                                             <td><select class="form-select text-light" type="text" name="koordinator[]" id="Koordinator">
                                                     <option value="">Tidak Ada</option>
@@ -211,7 +216,7 @@
                                         </tr>
                                         <tr class="item">
                                             <td><input type="text" class="form-control text-light"
-                                                    placeholder="Sekretaris Koordinator" readonly values="Sekretaris Koordinator" required></td>
+                                                    placeholder="Sekretaris Koordinator" readonly value="Sekretaris Koordinator" required></td>
                                             <td>
                                             <select class="form-select text-light" type="text" name="sekretaris_koordinator[]"
                                                 id="sekretaris_koordinator">
@@ -224,8 +229,15 @@
                                         </tr>
                                         <tr class="item">
                                             <td><input type="text" class="form-control text-light" placeholder="Anggota"
-                                                    values="Anggota" readonly required></td>
-                                            <td><select class="form-select text-light" type="text" name="anggota[][]" id="lele"
+                                                    value="Anggota" readonly required></td>
+                                            <td><input type="text" class="form-control text-light" placeholder="Anggota"
+                                                    value="anggota" name ="anggotaa[]" readonly required>
+                                            </td>
+                                        </tr>
+                                        <tr class="item">
+                                            <td><input type="text" class="form-control text-light" placeholder="Anggota"
+                                                    value="Anggota" readonly required></td>
+                                            <td><select class="form-select text-light" type="text" name="anggota[]" id="lele"
                                                     id="anggota">
                                                     <option value="">Tidak Ada</option>
                                                     <?php foreach ($Biodata as $biodata) : ?>
@@ -235,7 +247,9 @@
                                             </td>
                                             <td><a href="javascript:void(0);" class="add_button btn btn-sm btn-primary"
                                                     title="Add field"><i class="fa fa-plus"></i></a></td>
+                                            
                                         </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>

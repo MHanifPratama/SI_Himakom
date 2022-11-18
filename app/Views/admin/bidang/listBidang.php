@@ -17,31 +17,34 @@
 								<th scope="col">ID</th>
 								<th scope="col">Nama Bidang</th>
 								<th scope="col">Visi</th>
-                                <th scope="col">Misi</th>
+								<th scope="col">Misi</th>
 							</tr>
 						</thead>
 						<?php foreach ($Bidang as $bdg) : ?>
-							<tbody>
-								<tr>
-									<td><?= $bdg['id_bidang'] ?></td>
-									<td><?= $bdg['nama_bidang'] ?></td>
-									<td><?= $bdg['visi'] ?></td>
-									<td><?= $bdg['misi'] ?></td>
-									<td>
-										<div class="row">
-											<div class="col">
-												<form action="/hapus_bidang/<?= $bdg['id_bidang'] ?>" method="post">
-													<input type="hidden" name="_method" value="DELETE" />
-													<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i class="fa fa-trash"></i></button>
-												</form>
-											</div>
-											<div class="col">
-												<a class="btn btn-dark btn-sm ff-gantari" href="/edit_bidang/<?= $bdg['id_bidang'] ?>"><i class="fa fa-pen"></i></a>
-											</div>
+						<tbody>
+							<tr>
+								<td width="1%"><?= $bdg['id_bidang'] ?></td>
+								<td width="14%"><?= $bdg['nama_bidang'] ?></td>
+								<td width="35%"><?= $bdg['visi'] ?></td>
+								<td width="35%"><?= $bdg['misi'] ?></td>
+								<td>
+									<div class="row row-cols-auto">
+										<div class="col">
+											<form action="/hapus_bidang/<?= $bdg['id_bidang'] ?>" method="post">
+												<input type="hidden" name="_method" value="DELETE" />
+												<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i
+														class="fa fa-trash"></i></button>
+											</form>
 										</div>
-									</td>
-								</tr>
-							</tbody>
+										<div class="col">
+											<a class="btn btn-dark btn-sm ff-gantari"
+												href="/edit_bidang/<?= $bdg['id_bidang'] ?>"><i
+													class="fa fa-pen"></i></a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
 						<?php endforeach; ?>
 						<caption>Total</caption>
 					</table>

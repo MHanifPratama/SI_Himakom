@@ -20,25 +20,27 @@
 							</tr>
 						</thead>
 						<?php foreach ($Prodi as $pro) : ?>
-							<tbody>
-								<tr>
-									<td><?= $pro['id_prodi'] ?></td>
-									<td><?= $pro['nama_prodi'] ?></td>
-									<td>
-										<div class="row">
-											<div class="col">
-												<form action="/hapus_prodi/<?= $pro['id_prodi'] ?>" method="post">
-													<input type="hidden" name="_method" value="DELETE" />
-													<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i class="fa fa-trash"></i></button>
-												</form>
-											</div>
-											<div class="col">
-												<a class="btn btn-dark btn-sm ff-gantari" href="/edit_prodi/<?= $pro['id_prodi'] ?>"><i class="fa fa-pen"></i></a>
-											</div>
+						<tbody>
+							<tr>
+								<td><?= $pro['id_prodi'] ?></td>
+								<td><?= $pro['nama_prodi'] ?></td>
+								<td>
+									<div class="row row-cols-auto">
+										<div class="col">
+											<form action="/hapus_prodi/<?= $pro['id_prodi'] ?>" method="post">
+												<input type="hidden" name="_method" value="DELETE" />
+												<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i
+														class="fa fa-trash"></i></button>
+											</form>
 										</div>
-									</td>
-								</tr>
-							</tbody>
+										<div class="col">
+											<a class="btn btn-dark btn-sm ff-gantari"
+												href="/edit_prodi/<?= $pro['id_prodi'] ?>"><i class="fa fa-pen"></i></a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
 						<?php endforeach; ?>
 						<caption>Total</caption>
 					</table>

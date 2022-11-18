@@ -20,25 +20,28 @@
 							</tr>
 						</thead>
 						<?php foreach ($Jabatan as $jab) : ?>
-							<tbody>
-								<tr>
-									<td><?= $jab['id_jabatan'] ?></td>
-									<td><?= $jab['nama_jabatan'] ?></td>
-									<td>
-										<div class="row">
-											<div class="col">
-												<form action="/hapus_jabatan/<?= $jab['id_jabatan'] ?>" method="post">
-													<input type="hidden" name="_method" value="DELETE" />
-													<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i class="fa fa-trash"></i></button>
-												</form>
-											</div>
-											<div class="col">
-												<a class="btn btn-dark btn-sm ff-gantari" href="/edit_jabatan/<?= $jab['id_jabatan'] ?>"><i class="fa fa-pen"></i></a>
-											</div>
+						<tbody>
+							<tr>
+								<td><?= $jab['id_jabatan'] ?></td>
+								<td><?= $jab['nama_jabatan'] ?></td>
+								<td>
+									<div class="row row-cols-auto">
+										<div class="col">
+											<form action="/hapus_jabatan/<?= $jab['id_jabatan'] ?>" method="post">
+												<input type="hidden" name="_method" value="DELETE" />
+												<button type="submit" class="btn btn-dark btn-sm ff-gantari"><i
+														class="fa fa-trash"></i></button>
+											</form>
 										</div>
-									</td>
-								</tr>
-							</tbody>
+										<div class="col">
+											<a class="btn btn-dark btn-sm ff-gantari"
+												href="/edit_jabatan/<?= $jab['id_jabatan'] ?>"><i
+													class="fa fa-pen"></i></a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
 						<?php endforeach; ?>
 						<caption>Total</caption>
 					</table>

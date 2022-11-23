@@ -101,14 +101,14 @@
 						</div>
 						<div class="d-flex align-items-center ms-4 mt-2 mb-4">
 							<div class="position-relative">
-								<img class="rounded-circle" src="/assets/img/cat-who.jpg"
+								<img class="rounded-circle" src="/assets/img/logoBidang/<?=session()->get('logo_bidang')?>"
 									style="width: 40px; height: 40px;">
 								<div
 									class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
 								</div>
 							</div>
 							<div class="ms-3">
-								<h6 class="mb-0 ff-gantari">Kucing</h6>
+								<h6 class="mb-0 ff-gantari"><?=session()->get('nama_bidang')?></h6>
 								<span class="ff-gantari text-white-50">Pimpinan</span>
 							</div>
 						</div>

@@ -79,7 +79,6 @@
 	</div>
 </footer>
 <!-- Back to Top -->
-<a href="\tambah" class="btn btn-lg btn-light btn-lg-square back-to-top"><i class="bi bi-plus text-dark"></i></a>
 <!-- <a href="\viewCetak" class="btn btn-lg btn-light btn-lg-square back-to-top mx-5"><i class="bi bi-printer text-dark"></i></a> -->
 </div>
 

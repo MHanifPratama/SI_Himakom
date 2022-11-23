@@ -89,12 +89,12 @@ class HimakomSeeder extends Seeder
                 Membangun jaringan dan dukungan demi kelancaran dan usaha dan keuangan yang dilakukan.',
                 'logo_bidang'  => 'KWU.png',
             ],
-            [
-                'nama_bidang'  =>  'Tidak Ada',
-                'visi'  => 'Tidak Ada',
-                'misi'  =>  'Tidak Ada',
-                'logo_bidang'  => 'cat-who.jpg',
-            ],
+            // [
+            //     'nama_bidang'  =>  'Tidak Ada',
+            //     'visi'  => 'Tidak Ada',
+            //     'misi'  =>  'Tidak Ada',
+            //     'logo_bidang'  => 'cat-who.jpg',
+            // ],
         ];
         $dataProdi = [
             [

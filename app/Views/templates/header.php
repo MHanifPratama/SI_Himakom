@@ -132,6 +132,10 @@
                                 class="bi bi-person-lines-fill me-2"></i>Kepanitiaan</a>
                     </div>
                     <div class="navbar-nav w-100">
+                        <a href="/listAkunBidang" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+                                class="bi bi-person-lines-fill me-2"></i>Akun Bidang</a>
+                    </div>
+                    <div class="navbar-nav w-100">
                         <a href="/logoutAdmin" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
                                 class="bi bi-person-lines-fill me-2"></i>Logout</a>
                     </div>

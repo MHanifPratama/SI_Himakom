@@ -114,8 +114,16 @@
 						</div>
 
 						<div class="navbar-nav w-100">
+							<a href="/test" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+									class="bi bi-person-lines-fill me-2"></i>Pengurus</a>
+						</div>
+						<div class="navbar-nav w-100">
 							<a href="/listLaporan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
 									class="bi bi-person-lines-fill me-2"></i>Laporan</a>
+						</div>
+						<div class="navbar-nav w-100">
+							<a href="/logoutPimpinan" class="<?= "nav-itemgitu nav-link ff-gantari" ?>"><i
+									class="bi bi-person-lines-fill me-2"></i>Log Out</a>
 						</div>
 
 					</nav>

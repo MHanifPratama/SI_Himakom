@@ -8,10 +8,14 @@
 				<form action="cetakSK" method="post">
 					<div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
 						<select class="form-select text-light" id="laporan" name="laporan" aria-label="Laporan">
-							<option value="">SK Kepanitiaan</option>
+						<option value="1">Laporan Keanggotaan</option>	
+						<option value="2">SK Kepanitiaan</option>
 						</select>
 						<label for="laporan">Jenis Laporan</label>
 					</div>
+					<div class="form-floating border-0 mb-3 text-tertiary ff-gantari">
+                            <input type="hidden" class="form-control text-light" id="bidang" name="bidang" value="<?= session()->get('id_bidang') ?>" readonly >
+                        </div>
 					<button type="submit" class="btn btn-primary text-dark ff-gantari"><i class="fa fa-print"></i>
 						Cetak</button>
 				</form>

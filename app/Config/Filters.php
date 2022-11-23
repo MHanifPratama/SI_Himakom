@@ -18,6 +18,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $aliases = [
+        'authPimpinan'  =>\App\Filters\PimpinanAuth::class,
         'authAdmin'     => \App\Filters\AdminAuth::class,
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,

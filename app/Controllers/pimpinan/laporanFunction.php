@@ -14,11 +14,25 @@ class laporanFunction extends BaseController{
         return view('pimpinan\laporan\listLaporan');
     }
 
-
 	public function cetak_sk()
 	{
+		$laporan = $this->request->getVar('laporan');
+		if($laporan=='1'){
+			$biodata = new Biodata();
+			$bidang = new Bidang();
+			$hasilCount = array();
+			$data = $this -> request -> getVar('bidang');
+			$dataBiodata = $biodata->orderBy('biodata.id_jabatan', 'ASC')->searchAnggota($data);
+            $data = [
+                'title' => 'Biodata',
+                'anggota' => $dataBiodata
+            ];
+            return view('admin\anggota\printHanyaBidang', $data);
+			
+		}
+		$a = session()->get('id_bidang');
 		$Kepanitiaan = new Kepanitiaan();
-		$dataKepanitiaan = $Kepanitiaan->findAll();
+		$dataKepanitiaan = $Kepanitiaan->where('id_bidang',$a)->get()->getResultArray();
 		$BiodataModel = new Biodata();
 		$Biodata = $BiodataModel->join('bidang','bidang.id_bidang = biodata.id_bidang')
         ->join('prodi','prodi.id_prodi =biodata.id_prodi')

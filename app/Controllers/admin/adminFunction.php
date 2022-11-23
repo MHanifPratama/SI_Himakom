@@ -161,6 +161,7 @@ class adminFunction extends BaseController
         $bidang = new Bidang();
         $hasilCount = array();
         $data = $this -> request -> getVar('bidang');
+        // $data = $id;
         if ($data=='seluruh'){
             $dataBiodata = $biodata->getAllDataFromAllTable()->orderBy('biodata.id_bidang','ASC')->orderBy('biodata.id_jabatan','ASC')->get()->getResultArray();
             $dataBidang = $bidang->select('nama_bidang')->findAll();

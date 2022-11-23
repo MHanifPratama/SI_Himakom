@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>SIHIMA</title>
+	<title>SIHIMA - Login</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="" name="keywords">
 	<meta content="" name="description">
@@ -54,14 +54,19 @@
 									<h3 class="ff-gantari ms-2 fw-bold text-primary"></i>SIHIMA</h3>
 								</a>
 							</div>
-							<h3>Cari Keanggotaan</h3>
+							<h3>Pimpinan</h3>
 						</div>
-						<form action="/cariKeanggotaan" method="get">
+						<form action="/verifyLoginPimpinan" method="post">
 							<div class="form-floating mb-3">
-								<input required class="form-control text-white" type="text" id="npm" name="npm">
-								<label for="npm">NPM</label>
+								<input required class="form-control text-white" id="username" name="username">
+								<label for="email">Username</label>
 							</div>
-							<button type="submit" class="btn btn-primary py-3 w-100 mb-4 text-dark">Cari</button>
+							<div class="form-floating mb-3">
+								<input required class="form-control text-white" type="password" id="password"
+									name="password">
+								<label for="password">Kata Sandi</label>
+							</div>
+							<button type="submit" class="btn btn-primary py-3 w-100 mb-4 text-dark">Masuk</button>
 						</form>
 
 					</div>

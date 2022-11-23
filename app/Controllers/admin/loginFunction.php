@@ -7,6 +7,9 @@ use App\Models\admin\AkunAdmin;
 class loginFunction extends BaseController
 {
     public function viewLogin(){
+        if(session('login_admin')==true){
+            return redirect()->to(base_url('/list_anggota'));
+        }
         return view('admin\loginAdmin\login');
     }
     public function verifyLoginAdmin(){

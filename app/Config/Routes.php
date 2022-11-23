@@ -38,7 +38,7 @@ $routes->set404Override();
 
 $routes->get('/', 'Home::index');
 $routes->get('/viewKeanggotaan', 'Home::viewKeanggotaan');
-$routes->post('/cariKeanggotaan', 'Home::cariKeanggotaan');
+$routes->get('/cariKeanggotaan', 'Home::cariKeanggotaan');
 
 $routes->get('/loginAdmin', 'admin\loginFunction::viewLogin');
 $routes->post('/verifyLogin', 'admin\loginFunction::verifyLoginAdmin');
@@ -53,7 +53,7 @@ $routes->delete('/hapus/(:num)', 'admin\adminFunction::hapus/$1', ['filter' => '
 $routes->get('/edit/(:num)', 'admin\adminFunction::edit/$1', ['filter' => 'authAdmin']);
 $routes->post('/update/(:num)', 'admin\adminFunction::update/$1', ['filter' => 'authAdmin']);
 $routes->get('/viewCetak', 'admin\adminFunction::viewCetak/$1', ['filter' => 'authAdmin']);
-$routes->post('/tampilDataCetak', 'admin\adminFunction::tampilCetak', ['filter' => 'authAdmin']);
+$routes->post('/tampilDataCetak', 'admin\adminFunction::tampilCetak');
 
 //jabatan
 $routes->get('/listJabatan', 'admin\jabatanFunction::list_jabatan', ['filter' => 'authAdmin']);
@@ -84,12 +84,22 @@ $routes->post('/simpan_kepanitiaan', 'admin\kepanitiaanFunction::simpan', ['filt
 $routes->get('/edit_kepanitiaan/(:num)', 'admin\kepanitiaanFunction::edit/$1', ['filter' => 'authAdmin']);
 $routes->post('/update_kepanitiaan/(:num)', 'admin\kepanitiaanFunction::update/$1', ['filter' => 'authAdmin']);
 
+//Akun Bidang
+$routes->get('/listAkunBidang', 'admin\akunBidangFunction::list_akun_bidang', ['filter' => 'authAdmin']);
+$routes->get('/tambahAkunBidang', 'admin\akunBidangFunction::tambah', ['filter' => 'authAdmin']);
+$routes->post('/simpanAkunBidang', 'admin\akunBidangFunction::simpan', ['filter' => 'authAdmin']);
+$routes->delete('/hapusAkunBidang/(:num)', 'admin\akunBidangFunction::hapus/$1', ['filter' => 'authAdmin']);
+$routes->get('/editAkunBidang/(:num)','admin\akunBidangFunction::edit/$1', ['filter' => 'authAdmin']);
+$routes->post('/updateAkunBidang/(:num)','admin\akunBidangFunction::update/$1', ['filter' => 'authAdmin']);
 
-$routes->get('/test', 'pimpinan\anggotaFunction::list_laporan');
-$routes->get('/listLaporan', 'pimpinan\laporanFunction::list_laporan');
-$routes->post('/cetakSK', 'pimpinan\laporanFunction::cetak_sk');
+$routes->get('/test', 'pimpinan\anggotaFunction::list_laporan',['filter' => 'authPimpinan']);
+$routes->get('/listLaporan', 'pimpinan\laporanFunction::list_laporan',['filter' => 'authPimpinan']);
+$routes->post('/cetakSK', 'pimpinan\laporanFunction::cetak_sk',['filter' => 'authPimpinan']);
+$routes->get('/logoutPimpinan', 'pimpinan\loginFunction::logoutPimpinan',['filter' => 'authPimpinan']);
 $routes->post('/tampilDataCetakSK', 'pimpinan\laporanFunction::tampilCetakSK');
 
+$routes->get('/loginPimpinan','pimpinan\loginFunction::index');
+$routes->post('/verifyLoginPimpinan','pimpinan\loginFunction::verifyLogin');
 $routes->get('/detail_bidang/(:num)', 'Home::detail_bidang/$1');
 /*
  * --------------------------------------------------------------------

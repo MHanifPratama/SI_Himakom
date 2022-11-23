@@ -62,7 +62,7 @@
 								<th scope="col">Bidang</th>
 								<th scope="col">Prodi</th>
 								<th scope="col">Status Jabatan</th>
-								<th scope="col">Nama Kepanitiaan</th>
+								<!-- <th scope="col">Nama Kepanitiaan</th> -->
 								<th scope="col">Periode</th>
 							</tr>
 						</thead>
@@ -77,7 +77,6 @@
 								<td><?= $Bio['nama_bidang'] ?></td>
 								<td><?= $Bio['nama_prodi'] ?></td>
 								<td><?= $Bio['nama_jabatan'] ?></td>
-								<td><?= $Bio['nama_kepanitiaan'] ?></td>
 								<td><?= $Bio['periode'] ?></td>
 							</tr>
 						</tbody>

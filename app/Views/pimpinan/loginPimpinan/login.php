@@ -50,7 +50,7 @@
 									<img class="rounded-circle mb-2" src="/assets/img/himakom.png"
 										style="height: 30px;">
 								</div>
-								<a href="" class="text-decoration-none">
+								<a href="/" class="text-decoration-none">
 									<h3 class="ff-gantari ms-2 fw-bold text-primary"></i>SIHIMA</h3>
 								</a>
 							</div>
